@@ -17,4 +17,8 @@ jobs:
     - name: Build
       run: cargo build --release
     - name: Run auditpol
-      run: auditpol /list /subcategory:* /r
+      run: | 
+        auditpol /list /subcategory:* /r
+        Get-WinEvent -ListLog * | Select-Object LogName, MaximumSizeInBytes
+
+
