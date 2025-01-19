@@ -6,7 +6,7 @@ use yaml_rust2::{Yaml, YamlLoader};
 fn main() {
     let dir = "/Users/fukusuke/Scripts/Python/hayabusa-rules"; // Specify the directory to search
     let mut event_id_counts: HashMap<String, usize> = HashMap::new();
-    let mut category_counts: HashMap<String, usize> = HashMap::new();
+    let mut category_counts: HashMap<String, (usize, bool)> = HashMap::new();
     let mut total_event_ids = 0;
 
     for entry in WalkDir::new(dir).into_iter().filter_map(|e| e.ok()) {
@@ -35,18 +35,19 @@ fn main() {
     let mut category_counts: Vec<_> = category_counts.iter().collect();
     category_counts.sort_by(|a, b| b.1.cmp(a.1));
 
-    let total_categories: usize = category_counts.iter().map(|(_, &count)| count).sum();
+    let total_categories: usize = category_counts.iter().map(|(_, &(count, _))| count).sum();
 
     println!("---");
-    println!("| Category/Service | Count | Percentage |");
-    println!("|------------------|-------|------------|");
-    for (category, count) in category_counts {
-        let percentage = (*count as f64 / total_categories as f64) * 100.0;
-        println!("| {} | {} | {:.2}% |", category, count, percentage);
+    println!("| Category/Service | Count | Percentage | Source |");
+    println!("|------------------|-------|------------|--------|");
+    for (category, &(count, is_category)) in category_counts {
+        let percentage = (count as f64 / total_categories as f64) * 100.0;
+        let source = if is_category { "sysmon" } else { "" };
+        println!("| {} | {} | {:.2}% | {} |", category, count, percentage, source);
     }
 }
 
-fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, category_counts: &mut HashMap<String, usize>, total_event_ids: &mut usize) {
+fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, category_counts: &mut HashMap<String, (usize, bool)>, total_event_ids: &mut usize) {
     if let Some(channel) = yaml["Channel"].as_str() {
         if channel == "Security" {
             if let Some(event_id) = yaml["EventID"].as_i64() {
@@ -57,9 +58,9 @@ fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, catego
     }
 
     if let Some(category) = yaml["logsource"]["category"].as_str() {
-        *category_counts.entry(category.to_string()).or_insert(0) += 1;
+        category_counts.entry(category.to_string()).or_insert((0, true)).0 += 1;
     } else if let Some(service) = yaml["logsource"]["service"].as_str() {
-        *category_counts.entry(service.to_string()).or_insert(0) += 1;
+        category_counts.entry(service.to_string()).or_insert((0, false)).0 += 1;
     }
 
     if let Some(hash) = yaml.as_hash() {
