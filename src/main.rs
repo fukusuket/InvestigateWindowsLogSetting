@@ -78,7 +78,11 @@ fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, catego
     if let Some(category) = yaml["logsource"]["category"].as_str() {
         category_counts.entry(category.to_string()).or_insert((0, true)).0 += 1;
     } else if let Some(service) = yaml["logsource"]["service"].as_str() {
-        category_counts.entry(service.to_string()).or_insert((0, false)).0 += 1;
+        if service == "sysmon" {
+            category_counts.entry(service.to_string()).or_insert((0, true)).0 += 1;
+        } else {
+            category_counts.entry(service.to_string()).or_insert((0, false)).0 += 1;
+        }
     }
 
     if let Some(hash) = yaml.as_hash() {
