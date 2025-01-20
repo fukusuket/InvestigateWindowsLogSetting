@@ -47,7 +47,7 @@ fn main() {
     println!("|------------------|-------|------------|--------|");
     for (category, &(count, is_category)) in category_counts {
         let percentage = (count as f64 / total_categories as f64) * 100.0;
-        let source = if is_category { "sysmon" } else { "" };
+        let source = if is_category { "sysmon" } else { "defalut" };
         println!("| {} | {} | {:.2}% | {} |", category, count, percentage, source);
     }
 }
