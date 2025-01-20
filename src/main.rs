@@ -9,6 +9,9 @@ fn main() {
     let mut category_counts: HashMap<String, (usize, bool)> = HashMap::new();
     let mut total_event_ids = 0;
 
+    // Load EventId to Event mapping
+    let event_mapping = load_event_mapping("channel_eid_info.txt");
+
     for entry in WalkDir::new(dir).into_iter().filter_map(|e| e.ok()) {
         if entry.path().is_file() && entry.path().extension().and_then(|s| s.to_str()) == Some("yml") {
             if let Ok(content) = fs::read_to_string(entry.path()) {
@@ -25,11 +28,13 @@ fn main() {
     event_id_counts.sort_by(|a, b| b.1.cmp(a.1));
 
     println!("---");
-    println!("| EventId | Count | Percentage |");
-    println!("|---------|-------|------------|");
+    println!("| EventId | Event | Count | Percentage |");
+    println!("|---------|-------|-------|------------|");
     for (event_id, count) in event_id_counts {
         let percentage = (*count as f64 / total_event_ids as f64) * 100.0;
-        println!("| {} | {} | {:.2}% |", event_id, count, percentage);
+        let msg = "".to_string();
+        let event = event_mapping.get(event_id).unwrap_or(&msg);
+        println!("| {} | {} | {} | {:.2}% |", event_id, event, count, percentage);
     }
 
     let mut category_counts: Vec<_> = category_counts.iter().collect();
@@ -45,6 +50,19 @@ fn main() {
         let source = if is_category { "sysmon" } else { "" };
         println!("| {} | {} | {:.2}% | {} |", category, count, percentage, source);
     }
+}
+
+fn load_event_mapping(file_path: &str) -> HashMap<String, String> {
+    let mut event_mapping = HashMap::new();
+    if let Ok(content) = fs::read_to_string(file_path) {
+        for line in content.lines() {
+            let parts: Vec<&str> = line.split(',').collect();
+            if parts.len() == 3 {
+                event_mapping.insert(parts[1].to_string(), parts[2].to_string());
+            }
+        }
+    }
+    event_mapping
 }
 
 fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, category_counts: &mut HashMap<String, (usize, bool)>, total_event_ids: &mut usize) {
