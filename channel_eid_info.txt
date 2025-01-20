@@ -352,6 +352,7 @@ Security,5168,SPN check for SMB/SMB2 failed
 Security,5376,Credential Manager credentials backup
 Security,5377,Credential Manager credentials restore from backup
 Security,5378,Requested credentials delegation disallowed by policy
+Security,5379,Credential Manager credentials were read
 Security,5440,Callout present when firewall base filtering engine started
 Security,5441,Filter present when firewall base filtering engine started
 Security,5442,Provider present when firewall base filtering engine started
