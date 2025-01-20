@@ -26,7 +26,7 @@ jobs:
     - name: Get-WinEvent -ListLog * | Select-Object LogName, MaximumSizeInBytes
       run: Get-WinEvent -ListLog * | Select-Object LogName, MaximumSizeInBytes
     - name: Get-WinEvent -ListProvider *
-      run: Get-WinEvent -ListProvider * | ForEach-Object { $_.Events | ForEach-Object { [PSCustomObject]@{Provider=$_.ProviderName; EventID=$_.Id; Description=$_.Description -replace "`r`n", " "} } } | Export-Csv -Path "C:\Temp\All_EventIDs.csv" -NoTypeInformation -Encoding UTF8
+      run: Get-WinEvent -ListProvider * | ForEach-Object { $_.Events | ForEach-Object { [PSCustomObject]@{Provider=$_.ProviderName; EventID=$_.Id; Description=$_.Description -replace "`r`n", " "} } }
 
 
 
