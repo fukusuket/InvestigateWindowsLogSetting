@@ -43,12 +43,13 @@ fn main() {
     let total_categories: usize = category_counts.iter().map(|(_, &(count, _))| count).sum();
 
     println!("---");
-    println!("| Category/Service | Count | Percentage | Source |");
-    println!("|------------------|-------|------------|--------|");
+    println!("| Category/Service | Count | Percentage | Rules | Source |");
+    println!("|------------------|-------|------------|-------|--------|");
     for (category, &(count, is_category)) in category_counts {
         let percentage = (count as f64 / total_categories as f64) * 100.0;
-        let source = if is_category { "sysmon" } else { "defalut" };
-        println!("| {} | {} | {:.2}% | {} |", category, count, percentage, source);
+        let rules = count; // Assuming each count represents a rule
+        let source = if is_category { "sysmon" } else { "default" };
+        println!("| {} | {} | {:.2}% | {} | {} |", category, count, percentage, rules, source);
     }
 }
 
