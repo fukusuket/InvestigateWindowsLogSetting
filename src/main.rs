@@ -11,7 +11,6 @@ fn main() {
     let mut total_event_ids = 0;
 
     let event_mapping = load_event_mapping("channel_eid_info.txt");
-    let _category_mapping = load_category_mapping("mapping.csv");
 
     for entry in WalkDir::new(dir).into_iter().filter_map(|e| e.ok()) {
         if entry.path().is_file() && entry.path().extension().and_then(|s| s.to_str()) == Some("yml") {
@@ -43,14 +42,35 @@ fn main() {
 
     let total_categories: usize = category_counts.iter().map(|(_, &(count, _))| count).sum();
 
+    let category_mapping = load_category_mapping("mapping.csv");
     println!("---");
-    println!("| Category/Service | Count | Percentage | Rules | Source |");
-    println!("|------------------|-------|------------|-------|--------|");
+    println!("| Category/Service | Channel/EventID | Count | Percentage | Rules | Source |");
+    println!("|------------------|-----------------|-------|------------|-------|--------|");
     for (category, &(count, is_category)) in category_counts {
         let percentage = (count as f64 / total_categories as f64) * 100.0;
         let rules = count; // Assuming each count represents a rule
         let source = if is_category { "sysmon" } else { "default" };
-        println!("| {} | {} | {:.2}% | {} | {} |", category, count, percentage, rules, source);
+        if let Some(entry) = category_mapping.get(category) {
+            let mut s = "".to_string();
+            let mut i =0;
+            for (ch, eid) in entry {
+                if eid.is_empty() {
+                    s.push_str(&format!("{}", ch));
+                } else if entry.len() == 1 {
+                    s.push_str(&format!("{}:{}", ch, eid));
+                } else {
+                    if i == entry.len() - 1 {
+                        s.push_str(&format!("{}:{}", ch, eid));
+                    } else {
+                        s.push_str(&format!("{}:{}<br>", ch, eid));
+                    }
+                }
+                i += 1;
+            }
+            println!("| {} | {} | {} | {:.2}% | {} | {} |", category, s, count, percentage, rules, source);
+        } else {
+            println!("| {} | N/A | {} | {:.2}% | {} | {} |", category, count, percentage, rules, source);
+        }
     }
 }
 
@@ -94,7 +114,7 @@ fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, catego
     }
 }
 
-fn load_category_mapping(file_path: &str) -> HashMap<String, (String, String)> {
+fn load_category_mapping(file_path: &str) -> HashMap<String, Vec<(String, String)>> {
     let mut category_mapping = HashMap::new();
     let mut rdr = ReaderBuilder::new().from_path(file_path).expect("Failed to open CSV file");
     for result in rdr.records() {
@@ -102,7 +122,7 @@ fn load_category_mapping(file_path: &str) -> HashMap<String, (String, String)> {
         let category = record.get(0).unwrap_or("").to_string();
         let event_id = record.get(1).unwrap_or("").to_string();
         let channel = record.get(2).unwrap_or("").to_string();
-        category_mapping.insert(category, (channel, event_id));
+        category_mapping.entry(category).or_insert_with(Vec::new).push((channel, event_id));
     }
     category_mapping
 }
