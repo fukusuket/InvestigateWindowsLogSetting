@@ -30,10 +30,10 @@ fn main() {
     println!("---");
     println!("| EventId | Event | Count | Percentage |");
     println!("|---------|-------|-------|------------|");
-    for (event_id, count) in event_id_counts {
-        let percentage = (*count as f64 / total_event_ids as f64) * 100.0;
+    for (event_id, count) in event_id_counts.iter().take(10)  {
+        let percentage = (**count as f64 / total_event_ids as f64) * 100.0;
         let msg = "".to_string();
-        let event = event_mapping.get(event_id).unwrap_or(&msg);
+        let event = event_mapping.get(*event_id).unwrap_or(&msg);
         println!("| {} | {} | {} | {:.2}% |", event_id, event, count, percentage);
     }
 
@@ -46,11 +46,14 @@ fn main() {
     println!("---");
     println!("| Category/Service | Channel/EventID | Count | Percentage | Rules | Source |");
     println!("|------------------|-----------------|-------|------------|-------|--------|");
-    for (category, &(count, is_category)) in category_counts {
+    for (category, &(count, is_category)) in category_counts.iter().take(10) {
         let percentage = (count as f64 / total_categories as f64) * 100.0;
         let rules = count; // Assuming each count represents a rule
-        let source = if is_category { "sysmon" } else { "default" };
-        if let Some(entry) = category_mapping.get(category) {
+        let mut source = if is_category { "sysmon" } else { "default" };
+        if *category == "ps_script" {
+            source = "default";
+        }
+        if let Some(entry) = category_mapping.get(*category) {
             let mut s = "".to_string();
             let mut i =0;
             for (ch, eid) in entry {
