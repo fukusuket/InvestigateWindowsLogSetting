@@ -1,9 +1,23 @@
 category,EventID,Channel,service
 antivirus,"1006,1007,1008,1009,1010,1011,1012,1017,1018,1019,1115,1116","Microsoft-Windows-Windows Defender/Operational",windefend
+application-experience,,"Microsoft-Windows-Application-Experience/Program-Telemetry,Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant",application-experience
+applocker,,"Microsoft-Windows-AppLocker/MSI and Script,Microsoft-Windows-AppLocker/EXE and DLL,Microsoft-Windows-AppLocker/Packaged app-Deployment,Microsoft-Windows-AppLocker/Packaged app-Execution",applocker
+appmodel-runtime,,"Microsoft-Windows-AppModel-Runtime/Admin",appmodel-runtime
+appxdeployment-server,,"Microsoft-Windows-AppXDeploymentServer/Operational",appxdeployment-server
+appxpackaging-om,,"Microsoft-Windows-AppxPackaging/Operational",appxpackaging-om
+bits-client,,"Microsoft-Windows-Bits-Client/Operational",bits-client
+capi2,,"Microsoft-Windows-CAPI2/Operational",capi2
+certificateservicesclient-lifecycle-system,,"Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational",certificateservicesclient-lifecycle-system
 clipboard_change,"24","Microsoft-Windows-Sysmon/Operational",sysmon
+codeintegrity-operational,,"Microsoft-Windows-CodeIntegrity/Operational",codeintegrity-operational
 create_remote_thread,"8","Microsoft-Windows-Sysmon/Operational",sysmon
 create_stream_hash,"15","Microsoft-Windows-Sysmon/Operational",sysmon
+dhcp,,"Microsoft-Windows-DHCP-Server/Operational",dhcp
+diagnosis-scripted,,"Microsoft-Windows-Diagnosis-Scripted/Operational",diagnosis-scripted
+dns-client,,"Microsoft-Windows-DNS Client Events/Operational",dns-client
+dns-server-analytic,,"Microsoft-Windows-DNS-Server/Analytical",dns-server-analytic
 dns_query,"22","Microsoft-Windows-Sysmon/Operational",sysmon
+driver-framework,,"Microsoft-Windows-DriverFrameworks-UserMode/Operational",driver-framework
 driver_loaded,"6","Microsoft-Windows-Sysmon/Operational",sysmon
 file_block_executable,"27","Microsoft-Windows-Sysmon/Operational",sysmon
 file_block_shredding,"28","Microsoft-Windows-Sysmon/Operational",sysmon
@@ -12,15 +26,33 @@ file_creation,"11","Microsoft-Windows-Sysmon/Operational",sysmon
 file_delete,"23,26","Microsoft-Windows-Sysmon/Operational",sysmon
 file_delete_detected,"26","Microsoft-Windows-Sysmon/Operational",sysmon
 file_executable_detected,"29","Microsoft-Windows-Sysmon/Operational",sysmon
+firewall-as,,"Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",firewall-as
+hyper-v-worker,,"Microsoft-Windows-Hyper-V-Worker",hyper-v-worker
 image_loaded,"7","Microsoft-Windows-Sysmon/Operational",sysmon
+kernel-event-tracing,,"Microsoft-Windows-Kernel-EventTracing",kernel-event-tracing
+kernel-shimengine,,"Microsoft-Windows-Kernel-ShimEngine/Operational,Microsoft-Windows-Kernel-ShimEngine/Diagnostic",kernel-shimengine
+ldap_debug,,"Microsoft-Windows-LDAP-Client/Debug",ldap_debug
+lsa-server,,"Microsoft-Windows-LSA/Operational",lsa-server
+microsoft-servicebus-client,,"Microsoft-ServiceBus-Client",microsoft-servicebus-client
+msexchange-management,,"MSExchange Management",msexchange-management
 network_connection,"3","Microsoft-Windows-Sysmon/Operational",sysmon
 network_connection,"5156","Security",security
+ntfs,,"Microsoft-Windows-Ntfs/Operational",ntfs
+ntlm,,"Microsoft-Windows-NTLM/Operational",ntlm
+openssh,,"OpenSSH/Operational",openssh
 pipe_created,"17,18","Microsoft-Windows-Sysmon/Operational",sysmon
+printservice-admin,,"Microsoft-Windows-PrintService/Admin",printservice-admin
+printservice-operational,,"Microsoft-Windows-PrintService/Operational",printservice-operational
 process_access,"10","Microsoft-Windows-Sysmon/Operational",sysmon
 process_creation,"1","Microsoft-Windows-Sysmon/Operational",sysmon
 process_creation,"4688","Security",security
 process_tampering,"25","Microsoft-Windows-Sysmon/Operational",sysmon
 process_terminated,"5","Microsoft-Windows-Sysmon/Operational",sysmon
+ps_classic_provider_start,"600","Windows PowerShell",powershell-classic
+ps_classic_script,"800","Windows PowerShell",powershell-classic
+ps_classic_start,"400","Windows PowerShell",powershell-classic
+ps_module,"4103","Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational",powershell
+ps_script,"4104","Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational",powershell
 raw_access_thread,"9","Microsoft-Windows-Sysmon/Operational",sysmon
 registry_add,"12","Microsoft-Windows-Sysmon/Operational",sysmon
 registry_add,"4657","Security",security
@@ -31,47 +63,15 @@ registry_event_add,"4657","Security",security
 registry_event_set,"4657","Security",security
 registry_rename,"14","Microsoft-Windows-Sysmon/Operational",sysmon
 registry_set,"13","Microsoft-Windows-Sysmon/Operational",sysmon
+security-mitigations,,"Microsoft-Windows-Security-Mitigations*",security-mitigations
+shell-core,,"Microsoft-Windows-Shell-Core/Operational",shell-core
+smbclient-connectivity,,"Microsoft-Windows-SmbClient/Connectivity",smbclient-connectivity
+smbclient-security,,"Microsoft-Windows-SmbClient/Security",smbclient-security
 sysmon_error,"255","Microsoft-Windows-Sysmon/Operational",sysmon
 sysmon_status,"4,16","Microsoft-Windows-Sysmon/Operational",sysmon
+taskscheduler,,"Microsoft-Windows-TaskScheduler/Operational",taskscheduler
+terminalservices-localsessionmanager,,"Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",terminalservices-localsessionmanager
+vhdmp,,"Microsoft-Windows-VHDMP/Operational",vhdmp
+wmi,,"Microsoft-Windows-WMI-Activity/Operational",wmi
 wmi_event,"19,20,21","Microsoft-Windows-Sysmon/Operational",sysmon
 wmi_event,"5861","Microsoft-Windows-WMI-Activity/Operational",wmi
-ps_module,"4103","Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational",powershell
-ps_script,"4104","Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational",powershell
-ps_classic_start,"400","Windows PowerShell",powershell-classic
-ps_classic_provider_start,"600","Windows PowerShell",powershell-classic
-ps_classic_script,"800","Windows PowerShell",powershell-classic
-driver-framework,,"Microsoft-Windows-DriverFrameworks-UserMode/Operational",driver-framework
-dhcp,,"Microsoft-Windows-DHCP-Server/Operational",dhcp
-ntlm,,"Microsoft-Windows-NTLM/Operational",ntlm
-printservice-admin,,"Microsoft-Windows-PrintService/Admin",printservice-admin
-printservice-operational,,"Microsoft-Windows-PrintService/Operational",printservice-operational
-terminalservices-localsessionmanager,,"Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",terminalservices-localsessionmanager
-smbclient-security,,"Microsoft-Windows-SmbClient/Security",smbclient-security
-smbclient-connectivity,,"Microsoft-Windows-SmbClient/Connectivity",smbclient-connectivity
-applocker,,"Microsoft-Windows-AppLocker/MSI and Script,Microsoft-Windows-AppLocker/EXE and DLL,Microsoft-Windows-AppLocker/Packaged app-Deployment,Microsoft-Windows-AppLocker/Packaged app-Execution",applocker
-msexchange-management,,"MSExchange Management",msexchange-management
-microsoft-servicebus-client,,"Microsoft-ServiceBus-Client",microsoft-servicebus-client
-ldap_debug,,"Microsoft-Windows-LDAP-Client/Debug",ldap_debug
-taskscheduler,,"Microsoft-Windows-TaskScheduler/Operational",taskscheduler
-wmi,,"Microsoft-Windows-WMI-Activity/Operational",wmi
-codeintegrity-operational,,"Microsoft-Windows-CodeIntegrity/Operational",codeintegrity-operational
-firewall-as,,"Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",firewall-as
-bits-client,,"Microsoft-Windows-Bits-Client/Operational",bits-client
-diagnosis-scripted,,"Microsoft-Windows-Diagnosis-Scripted/Operational",diagnosis-scripted
-shell-core,,"Microsoft-Windows-Shell-Core/Operational",shell-core
-security-mitigations,,"Microsoft-Windows-Security-Mitigations*",security-mitigations
-openssh,,"OpenSSH/Operational",openssh
-vhdmp,,"Microsoft-Windows-VHDMP/Operational",vhdmp
-appxdeployment-server,,"Microsoft-Windows-AppXDeploymentServer/Operational",appxdeployment-server
-lsa-server,,"Microsoft-Windows-LSA/Operational",lsa-server
-appxpackaging-om,,"Microsoft-Windows-AppxPackaging/Operational",appxpackaging-om
-dns-client,,"Microsoft-Windows-DNS Client Events/Operational",dns-client
-dns-server-analytic,,"Microsoft-Windows-DNS-Server/Analytical",dns-server-analytic
-appmodel-runtime,,"Microsoft-Windows-AppModel-Runtime/Admin",appmodel-runtime
-capi2,,"Microsoft-Windows-CAPI2/Operational",capi2
-certificateservicesclient-lifecycle-system,,"Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational",certificateservicesclient-lifecycle-system
-kernel-shimengine,,"Microsoft-Windows-Kernel-ShimEngine/Operational,Microsoft-Windows-Kernel-ShimEngine/Diagnostic",kernel-shimengine
-application-experience,,"Microsoft-Windows-Application-Experience/Program-Telemetry,Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant",application-experience
-ntfs,,"Microsoft-Windows-Ntfs/Operational",ntfs
-hyper-v-worker,,"Microsoft-Windows-Hyper-V-Worker",hyper-v-worker
-kernel-event-tracing,,"Microsoft-Windows-Kernel-EventTracing",kernel-event-tracing
