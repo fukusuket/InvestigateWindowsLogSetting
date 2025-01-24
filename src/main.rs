@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::fs;
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
+use csv::ReaderBuilder;
 
 fn main() {
     let dir = "/Users/fukusuke/Scripts/Python/hayabusa-rules"; // Specify the directory to search
@@ -9,8 +10,8 @@ fn main() {
     let mut category_counts: HashMap<String, (usize, bool)> = HashMap::new();
     let mut total_event_ids = 0;
 
-    // Load EventId to Event mapping
     let event_mapping = load_event_mapping("channel_eid_info.txt");
+    let _category_mapping = load_category_mapping("mapping.csv");
 
     for entry in WalkDir::new(dir).into_iter().filter_map(|e| e.ok()) {
         if entry.path().is_file() && entry.path().extension().and_then(|s| s.to_str()) == Some("yml") {
@@ -91,4 +92,17 @@ fn search_yaml(yaml: &Yaml, event_id_counts: &mut HashMap<String, usize>, catego
             search_yaml(value, event_id_counts, category_counts, total_event_ids);
         }
     }
+}
+
+fn load_category_mapping(file_path: &str) -> HashMap<String, (String, String)> {
+    let mut category_mapping = HashMap::new();
+    let mut rdr = ReaderBuilder::new().from_path(file_path).expect("Failed to open CSV file");
+    for result in rdr.records() {
+        let record = result.expect("Failed to read record");
+        let category = record.get(0).unwrap_or("").to_string();
+        let event_id = record.get(1).unwrap_or("").to_string();
+        let channel = record.get(2).unwrap_or("").to_string();
+        category_mapping.insert(category, (channel, event_id));
+    }
+    category_mapping
 }

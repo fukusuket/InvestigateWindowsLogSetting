@@ -47,7 +47,7 @@ printservice-admin,,"Microsoft-Windows-PrintService/Admin",printservice-admin
 printservice-operational,,"Microsoft-Windows-PrintService/Operational",printservice-operational
 terminalservices-localsessionmanager,,"Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",terminalservices-localsessionmanager
 smbclient-security,,"Microsoft-Windows-SmbClient/Security",smbclient-security
-smbclient-connectivity,,"Microsoft-Windows-SmbClient/Connectivity",smbclient-connectivity,
+smbclient-connectivity,,"Microsoft-Windows-SmbClient/Connectivity",smbclient-connectivity
 applocker,,"Microsoft-Windows-AppLocker/MSI and Script,Microsoft-Windows-AppLocker/EXE and DLL,Microsoft-Windows-AppLocker/Packaged app-Deployment,Microsoft-Windows-AppLocker/Packaged app-Execution",applocker
 msexchange-management,,"MSExchange Management",msexchange-management
 microsoft-servicebus-client,,"Microsoft-ServiceBus-Client",microsoft-servicebus-client
@@ -65,12 +65,12 @@ vhdmp,,"Microsoft-Windows-VHDMP/Operational",vhdmp
 appxdeployment-server,,"Microsoft-Windows-AppXDeploymentServer/Operational",appxdeployment-server
 lsa-server,,"Microsoft-Windows-LSA/Operational",lsa-server
 appxpackaging-om,,"Microsoft-Windows-AppxPackaging/Operational",appxpackaging-om
-dns-client,,"Microsoft-Windows-DNS Client Events/Operational",dns-client,
+dns-client,,"Microsoft-Windows-DNS Client Events/Operational",dns-client
 dns-server-analytic,,"Microsoft-Windows-DNS-Server/Analytical",dns-server-analytic
 appmodel-runtime,,"Microsoft-Windows-AppModel-Runtime/Admin",appmodel-runtime
 capi2,,"Microsoft-Windows-CAPI2/Operational",capi2
 certificateservicesclient-lifecycle-system,,"Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational",certificateservicesclient-lifecycle-system
-kernel-shimengine,,"Microsoft-Windows-Kernel-ShimEngine/Operational,Microsoft-Windows-Kernel-ShimEngine/Diagnostic",kernel-shimengine,
+kernel-shimengine,,"Microsoft-Windows-Kernel-ShimEngine/Operational,Microsoft-Windows-Kernel-ShimEngine/Diagnostic",kernel-shimengine
 application-experience,,"Microsoft-Windows-Application-Experience/Program-Telemetry,Microsoft-Windows-Application-Experience/Program-Compatibility-Assistant",application-experience
 ntfs,,"Microsoft-Windows-Ntfs/Operational",ntfs
 hyper-v-worker,,"Microsoft-Windows-Hyper-V-Worker",hyper-v-worker
