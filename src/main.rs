@@ -30,7 +30,7 @@ fn main() {
     println!("---");
     println!("| EventId | Event | Count | Percentage |");
     println!("|---------|-------|-------|------------|");
-    for (event_id, count) in event_id_counts.iter().take(10)  {
+    for (event_id, count) in event_id_counts.iter().take(20)  {
         let percentage = (**count as f64 / total_event_ids as f64) * 100.0;
         let msg = "".to_string();
         let event = event_mapping.get(*event_id).unwrap_or(&msg);
@@ -46,7 +46,7 @@ fn main() {
     println!("---");
     println!("| Category/Service | Channel/EventID | Count | Percentage | Rules | Source |");
     println!("|------------------|-----------------|-------|------------|-------|--------|");
-    for (category, &(count, is_category)) in category_counts.iter().take(10) {
+    for (category, &(count, is_category)) in category_counts.iter().take(20) {
         let percentage = (count as f64 / total_categories as f64) * 100.0;
         let rules = count; // Assuming each count represents a rule
         let mut source = if is_category { "sysmon" } else { "default" };
@@ -55,8 +55,7 @@ fn main() {
         }
         if let Some(entry) = category_mapping.get(*category) {
             let mut s = "".to_string();
-            let mut i =0;
-            for (ch, eid) in entry {
+            for (i, (ch, eid)) in entry.iter().enumerate() {
                 if eid.is_empty() {
                     s.push_str(&format!("{}", ch));
                 } else if entry.len() == 1 {
@@ -68,7 +67,6 @@ fn main() {
                         s.push_str(&format!("{}:{}<br>", ch, eid));
                     }
                 }
-                i += 1;
             }
             println!("| {} | {} | {} | {:.2}% | {} | {} |", category, s, count, percentage, rules, source);
         } else {
