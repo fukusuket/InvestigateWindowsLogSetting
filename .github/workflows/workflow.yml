@@ -25,3 +25,23 @@ jobs:
 
       - name: Run
         run: cargo run --release -- hayabusa-rules
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit changes
+        run: |
+          git add *.md
+          git add *.csv
+          git commit -m "Automated update"
+
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd ./self
+          if [ "$(git log -1 --pretty=%B)" = "Automated update" ]; then
+            git push origin main
+          fi
