@@ -1,14 +1,19 @@
 use csv::{ReaderBuilder, Writer};
 use std::collections::HashMap;
 use std::error::Error;
-use std::fs;
+use std::{env, fs};
 use std::fs::File;
 use std::io::Write;
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let dir = "/Users/fukusuke/Scripts/Python/hayabusa-rules"; // Specify the directory to search
+    let args: Vec<String> = env::args().collect();
+    if args.len() < 2 {
+        eprintln!("Usage: {} <directory>", args[0]);
+        std::process::exit(1);
+    }
+    let dir = &args[1];
     let mut event_id_counts: HashMap<String, usize> = HashMap::new();
     let mut category_counts: HashMap<String, (usize, bool)> = HashMap::new();
     let mut total_event_ids = 0;

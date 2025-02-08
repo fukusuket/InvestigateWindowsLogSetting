@@ -1,0 +1,27 @@
+name: Create Markdown and CSV
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  schedule:
+    - cron: '30 00 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout self repository
+        uses: actions/checkout@v4
+
+      - name: Checkout hayabusa-rules
+        uses: actions/checkout@v4
+        with:
+          repository: Yamato-Security/hayabusa-rules
+          path: hayabusa-rules
+
+      - name: Run
+        run: cargo run --release -- hayabusa-rules
