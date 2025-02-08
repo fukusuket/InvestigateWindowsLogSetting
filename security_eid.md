@@ -7,16 +7,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 4634 | Account logoff | 2 | 0.12% |
+| 4720 | User account created | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 5379 | Credential Manager credentials were read | 2 | 0.12% |
 | 4769 | Kerberos service ticket requested | 2 | 0.12% |
-| 4720 | User account created | 2 | 0.12% |
-| 4778 | Window station session reconnected | 1 | 0.06% |
-| 4825 | RDP logon failed | 1 | 0.06% |
-| 6410 | Code integrity determined that a file does not meet the security requirements to load into a process | 1 | 0.06% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 4634 | Account logoff | 2 | 0.12% |
+| 4723 | Account password change attempt | 1 | 0.06% |
+| 5145 | Network share object checked for client access | 1 | 0.06% |
+| 4698 | Scheduled task created | 1 | 0.06% |
+| 4779 | Window station session disconnected | 1 | 0.06% |
 | 4699 | Scheduled task deleted | 1 | 0.06% |
-| 5157 | Firewall blocked a connection | 1 | 0.06% |
-| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
+| 4724 | Account password reset attempt | 1 | 0.06% |
