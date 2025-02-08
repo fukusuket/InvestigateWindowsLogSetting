@@ -1,9 +1,9 @@
 use csv::{ReaderBuilder, Writer};
 use std::collections::HashMap;
 use std::error::Error;
-use std::{env, fs};
 use std::fs::File;
 use std::io::Write;
+use std::{env, fs};
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
 
