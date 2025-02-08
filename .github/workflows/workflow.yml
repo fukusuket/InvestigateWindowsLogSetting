@@ -41,7 +41,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd ./self
           if [ "$(git log -1 --pretty=%B)" = "Automated update" ]; then
             git push origin main
           fi
