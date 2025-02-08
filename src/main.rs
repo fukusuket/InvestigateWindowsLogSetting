@@ -101,6 +101,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         if *category == "ps_script" {
             source = "default";
         }
+        let mut source = source.to_string();
         if let Some(entry) = category_mapping.get(*category) {
             let mut s = "".to_string();
             for (i, (ch, eid)) in entry.iter().enumerate() {
@@ -113,6 +114,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                         s.push_str(&format!("{}:{}", ch, eid));
                     } else {
                         s.push_str(&format!("{}:{}<br>", ch, eid));
+                        source.push_str(&format!("<br>{}", "non-default"));
                     }
                 }
             }
