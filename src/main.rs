@@ -43,15 +43,12 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let mut event_id_counts: Vec<_> = event_id_counts.iter().collect();
     event_id_counts.sort_by(|a, b| b.1.cmp(a.1));
-
-    let mut md_file = File::create("README.md")?;
-
     let mut category_counts: Vec<_> = category_counts.iter().collect();
     category_counts.sort_by(|a, b| b.1.cmp(a.1));
-
     let total_categories: usize = category_counts.iter().map(|(_, &(count, _))| count).sum();
     let category_mapping = load_category_mapping("mapping.csv");
 
+    let mut md_file = File::create("README.md")?;
     md_file
         .write_all("## Top Sigma log sources graph\n".as_bytes())
         .ok();
@@ -143,9 +140,14 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
     wtr.flush()?;
-
     md_file
-        .write_all("## Top Security Event IDs\n".as_bytes())
+        .write_all("## Top Security Event IDs graph\n".as_bytes())
+        .ok();
+    md_file
+        .write_all("![Top Security Event IDs](Windows-Events-Security-IDs.svg)\n".as_bytes())
+        .ok();
+    md_file
+        .write_all("## Top Security Event IDs table\n".as_bytes())
         .ok();
     md_file
         .write_all("| EventId | Event | Count | Percentage |\n".as_bytes())
@@ -153,6 +155,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     md_file
         .write_all("|---------|-------|-------|------------|\n".as_bytes())
         .ok();
+
     let file = File::create("security_eid.csv")?;
     let mut wtr = Writer::from_writer(file);
     wtr.write_record(["EventId", "Event", "Count", "Percentage"])?;
@@ -213,6 +216,42 @@ fn draw_pie_chart() {
     renderer
         .save(&chart, "Windows-Events-with-Sigma-Rules.svg")
         .ok();
+
+    let file_path = "security_eid.csv";
+    let mut rdr = ReaderBuilder::new()
+        .from_path(Path::new(file_path))
+        .unwrap();
+    let mut source_percentage: HashMap<String, f64> = HashMap::new();
+    for result in rdr.records().take(10) {
+        let record = result.unwrap();
+        let source = record.get(1).unwrap_or("").to_string().replace("<br>", "/");
+        let percentage: f64 = record
+            .get(3)
+            .unwrap_or("0")
+            .trim_end_matches('%')
+            .parse()
+            .unwrap_or(0.0);
+        *source_percentage.entry(source).or_insert(0.0) += percentage;
+    }
+
+    let source_percentage_vec: Vec<(f64, String)> = source_percentage
+        .into_iter()
+        .map(|(source, total_percentage)| (total_percentage, source))
+        .collect();
+
+    let chart = Chart::new().legend(Legend::new().top("bottom")).series(
+        Pie::new()
+            .radius(vec!["50", "250"])
+            .center(vec!["50%", "50%"])
+            .item_style(ItemStyle::new().border_radius(8))
+            .data(source_percentage_vec),
+    );
+
+    let mut renderer = ImageRenderer::new(1000, 800);
+    renderer
+        .save(&chart, "Windows-Events-Security-IDs.svg")
+        .ok();
+
 }
 
 fn load_event_mapping(file_path: &str) -> HashMap<String, String> {

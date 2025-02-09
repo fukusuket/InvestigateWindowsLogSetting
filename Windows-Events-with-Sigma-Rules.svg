@@ -1,19 +1,19 @@
 <svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 800">
 <rect width="1000" height="800" x="0" y="0" id="0" fill="none"></rect>
-<polyline points="599.7 170.7 605.6 157 620.6 157" fill="none" stroke="#5470c6"></polyline>
-<polyline points="571.5 639.6 575.8 653.9 590.8 653.9" fill="none" stroke="#91cc75"></polyline>
+<polyline points="723.9 511.2 737.4 517.8 752.4 517.8" fill="none" stroke="#5470c6"></polyline>
+<polyline points="257.1 459.2 242.5 462.8 227.5 462.8" fill="none" stroke="#91cc75"></polyline>
 <polyline points="339 208.8 329.3 197.3 314.3 197.3" fill="none" stroke="#fac858"></polyline>
-<path d="M500 158.1A8 8 0 0 1 508.3 150.1A250 250 0 0 1 677.1 223.5A8 8 0 0 1 676.8 235L542 360.8A8 8 0 0 1 531.5 361.2A50 50 0 0 0 506.9 350.5A8 8 0 0 1 500 342.6Z" fill="#5470c6"></path>
-<path d="M676.8 235A8 8 0 0 1 688.3 235.6A250 250 0 1 1 252.4 365.6A8 8 0 0 1 261.7 358.9L443.4 390.2A8 8 0 0 1 450 398.4A50 50 0 1 0 540.9 371.3A8 8 0 0 1 542 360.8Z" fill="#91cc75"></path>
+<path d="M500 158.1A8 8 0 0 1 508.3 150.1A250 250 0 1 1 306 557.6A8 8 0 0 1 307.3 546.2L454.2 434.7A8 8 0 0 1 464.7 435.4A50 50 0 1 0 506.9 350.5A8 8 0 0 1 500 342.6Z" fill="#5470c6"></path>
+<path d="M307.3 546.2A8 8 0 0 1 296 544.5A250 250 0 0 1 252.4 365.6A8 8 0 0 1 261.7 358.9L443.4 390.2A8 8 0 0 1 450 398.4A50 50 0 0 0 456.4 424.4A8 8 0 0 1 454.2 434.7Z" fill="#91cc75"></path>
 <path d="M261.7 358.9A8 8 0 0 1 255.2 349.4A250 250 0 0 1 491.7 150.1A8 8 0 0 1 500 158.1L500 342.6A8 8 0 0 1 493.1 350.5A50 50 0 0 0 452.4 384.8A8 8 0 0 1 443.4 390.2Z" fill="#fac858"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" transform="translate(625.638 156.9658)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">default</text>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" transform="translate(595.754 653.9416)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">sysmon/non-default</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" transform="translate(757.3557 517.8442)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">sysmon/non-default</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(222.5389 462.7598)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">default</text>
 <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(309.2954 197.3058)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">sysmon</text>
 <path d="M-5 -5l302.8 0l0 24l-302.8 0Z" transform="translate(353.62 781)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0"></path>
 <path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(353.62 781)" fill="#5470c6"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(353.62 781)" fill="#333">default</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(429.86 781)" fill="#91cc75"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(429.86 781)" fill="#333">sysmon/non-default</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(353.62 781)" fill="#333">sysmon/non-default</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(498.74 781)" fill="#91cc75"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(498.74 781)" fill="#333">default</text>
 <path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(574.98 781)" fill="#fac858"></path>
 <text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" x="30" y="7" transform="translate(574.98 781)" fill="#333">sysmon</text>
 </svg>
