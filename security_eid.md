@@ -7,16 +7,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
+| 4634 | Account logoff | 2 | 0.12% |
 | 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4634 | Account logoff | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 6281 | Code Integrity determined that the page hashes of an image file are not valid  | 1 | 0.06% |
-| 4825 | RDP logon failed | 1 | 0.06% |
-| 1102 | Audit log cleared | 1 | 0.06% |
-| 5038 | Code Integrity invalid file hash | 1 | 0.06% |
-| 5145 | Network share object checked for client access | 1 | 0.06% |
+| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
 | 4724 | Account password reset attempt | 1 | 0.06% |
+| 4699 | Scheduled task deleted | 1 | 0.06% |
+| 5038 | Code Integrity invalid file hash | 1 | 0.06% |
+| 5157 | Firewall blocked a connection | 1 | 0.06% |
+| 4778 | Window station session reconnected | 1 | 0.06% |
