@@ -1,4 +1,3 @@
-use charming::component::Title;
 use charming::{component::Legend, element::ItemStyle, series::Pie, Chart, ImageRenderer};
 use csv::{ReaderBuilder, Writer};
 use std::collections::HashMap;
@@ -47,6 +46,9 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let mut md_file = File::create("security_eid.md")?;
     md_file
+        .write_all("## Top Security Event IDs\n".as_bytes())
+        .ok();
+    md_file
         .write_all("| EventId | Event | Count | Percentage |\n".as_bytes())
         .ok();
     md_file
@@ -80,6 +82,15 @@ fn main() -> Result<(), Box<dyn Error>> {
     let category_mapping = load_category_mapping("mapping.csv");
 
     let mut md_file = File::create("sigma_eid.md")?;
+    md_file
+        .write_all("## Top Sigma log sources graph\n".as_bytes())
+        .ok();
+    md_file
+        .write_all("![Top Sigma log sources](Windows-Events-with-Sigma-Rules.svg)\n".as_bytes())
+        .ok();
+    md_file
+        .write_all("## Top Sigma log sources table\n".as_bytes())
+        .ok();
     md_file
         .write_all(
             "| Category/Service | Channel/EventID | Count | Percentage | Rules | Source |\n"
@@ -191,17 +202,11 @@ fn draw_pie_chart() {
         .collect();
 
     let chart = Chart::new()
-        .title(
-            Title::new()
-                .text("Windows Events with Sigma Rules")
-                .left("center"),
-        )
         .legend(Legend::new().top("bottom"))
         .series(
             Pie::new()
-                .name("Windows Events with Sigma Rules")
                 .radius(vec!["50", "250"])
-                .center(vec!["50%", "50%"])
+                .center(vec!["80%", "80%"])
                 .item_style(ItemStyle::new().border_radius(8))
                 .data(source_percentage_vec),
         );
