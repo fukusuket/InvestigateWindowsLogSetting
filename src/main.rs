@@ -1,3 +1,4 @@
+use charming::{component::Legend, element::ItemStyle, series::Pie, Chart, ImageRenderer};
 use csv::{ReaderBuilder, Writer};
 use std::collections::HashMap;
 use std::error::Error;
@@ -26,9 +27,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         {
             if let Ok(content) = fs::read_to_string(entry.path()) {
                 if let Ok(docs) = YamlLoader::load_from_str(&content) {
-                    if let Some(yaml) = docs.get(0) {
+                    if let Some(yaml) = docs.first() {
                         search_yaml(
-                            &yaml,
+                            yaml,
                             &mut event_id_counts,
                             &mut category_counts,
                             &mut total_event_ids,
@@ -51,7 +52,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         .ok();
     let file = File::create("security_eid.csv")?;
     let mut wtr = Writer::from_writer(file);
-    wtr.write_record(&["EventId", "Event", "Count", "Percentage"])?;
+    wtr.write_record(["EventId", "Event", "Count", "Percentage"])?;
     for (event_id, count) in event_id_counts.iter().take(20) {
         let percentage = (**count as f64 / total_event_ids as f64) * 100.0;
         let msg = "".to_string();
@@ -66,7 +67,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             )
             .ok();
         let percentage = format!("{:.2}%", percentage);
-        wtr.write_record(&[event_id, event, &count.to_string(), &percentage])?;
+        wtr.write_record([event_id, event, &count.to_string(), &percentage])?;
     }
     wtr.flush()?;
 
@@ -91,7 +92,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         .ok();
     let file = File::create("sigma_eid.csv")?;
     let mut wtr = Writer::from_writer(file);
-    wtr.write_record(&[
+    wtr.write_record([
         "Category/Service",
         "Channel/EventID",
         "Count",
@@ -111,16 +112,12 @@ fn main() -> Result<(), Box<dyn Error>> {
             let mut s = "".to_string();
             for (i, (ch, eid)) in entry.iter().enumerate() {
                 if eid.is_empty() {
-                    s.push_str(&format!("{}", ch));
-                } else if entry.len() == 1 {
+                    s.push_str(&ch.to_string());
+                } else if entry.len() == 1 || i == entry.len() - 1 {
                     s.push_str(&format!("{}:{}", ch, eid));
                 } else {
-                    if i == entry.len() - 1 {
-                        s.push_str(&format!("{}:{}", ch, eid));
-                    } else {
-                        s.push_str(&format!("{}:{}<br>", ch, eid));
-                        source.push_str(&format!("<br>{}", "non-default"));
-                    }
+                    s.push_str(&format!("{}:{}<br>", ch, eid));
+                    source.push_str(&format!("<br>{}", "non-default"));
                 }
             }
             md_file
@@ -133,7 +130,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 )
                 .ok();
             let percentage = format!("{:.2}%", percentage);
-            wtr.write_record(&[
+            wtr.write_record([
                 category,
                 &s,
                 &count.to_string(),
@@ -152,7 +149,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 )
                 .ok();
             let percentage = format!("{:.2}%", percentage);
-            wtr.write_record(&[
+            wtr.write_record([
                 category,
                 "N/A",
                 &count.to_string(),
@@ -162,7 +159,33 @@ fn main() -> Result<(), Box<dyn Error>> {
             ])?;
         }
     }
+    draw_pie_chart();
     Ok(())
+}
+
+fn draw_pie_chart() {
+    let chart = Chart::new().legend(Legend::new().top("bottom")).series(
+        Pie::new()
+            .name("Windows Events with Sigma Rules")
+            .radius(vec!["50", "250"])
+            .center(vec!["50%", "50%"])
+            .item_style(ItemStyle::new().border_radius(8))
+            .data(vec![
+                (40.0, "rose 1"),
+                (38.0, "rose 2"),
+                (32.0, "rose 3"),
+                (30.0, "rose 4"),
+                (28.0, "rose 5"),
+                (26.0, "rose 6"),
+                (22.0, "rose 7"),
+                (18.0, "rose 8"),
+            ]),
+    );
+
+    let mut renderer = ImageRenderer::new(1000, 800);
+    renderer
+        .save(&chart, "Windows-Events-with-Sigma-Rules.svg")
+        .ok();
 }
 
 fn load_event_mapping(file_path: &str) -> HashMap<String, String> {
