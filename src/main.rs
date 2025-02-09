@@ -44,36 +44,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut event_id_counts: Vec<_> = event_id_counts.iter().collect();
     event_id_counts.sort_by(|a, b| b.1.cmp(a.1));
 
-    let mut md_file = File::create("security_eid.md")?;
-    md_file
-        .write_all("## Top Security Event IDs\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("| EventId | Event | Count | Percentage |\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("|---------|-------|-------|------------|\n".as_bytes())
-        .ok();
-    let file = File::create("security_eid.csv")?;
-    let mut wtr = Writer::from_writer(file);
-    wtr.write_record(["EventId", "Event", "Count", "Percentage"])?;
-    for (event_id, count) in event_id_counts.iter().take(20) {
-        let percentage = (**count as f64 / total_event_ids as f64) * 100.0;
-        let msg = "".to_string();
-        let event = event_mapping.get(*event_id).unwrap_or(&msg);
-        md_file
-            .write_all(
-                format!(
-                    "| {} | {} | {} | {:.2}% |\n",
-                    event_id, event, count, percentage
-                )
-                .as_bytes(),
-            )
-            .ok();
-        let percentage = format!("{:.2}%", percentage);
-        wtr.write_record([event_id, event, &count.to_string(), &percentage])?;
-    }
-    wtr.flush()?;
+    let mut md_file = File::create("README.md")?;
 
     let mut category_counts: Vec<_> = category_counts.iter().collect();
     category_counts.sort_by(|a, b| b.1.cmp(a.1));
@@ -81,7 +52,6 @@ fn main() -> Result<(), Box<dyn Error>> {
     let total_categories: usize = category_counts.iter().map(|(_, &(count, _))| count).sum();
     let category_mapping = load_category_mapping("mapping.csv");
 
-    let mut md_file = File::create("sigma_eid.md")?;
     md_file
         .write_all("## Top Sigma log sources graph\n".as_bytes())
         .ok();
@@ -174,6 +144,36 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
     wtr.flush()?;
 
+    md_file
+        .write_all("## Top Security Event IDs\n".as_bytes())
+        .ok();
+    md_file
+        .write_all("| EventId | Event | Count | Percentage |\n".as_bytes())
+        .ok();
+    md_file
+        .write_all("|---------|-------|-------|------------|\n".as_bytes())
+        .ok();
+    let file = File::create("security_eid.csv")?;
+    let mut wtr = Writer::from_writer(file);
+    wtr.write_record(["EventId", "Event", "Count", "Percentage"])?;
+    for (event_id, count) in event_id_counts.iter().take(20) {
+        let percentage = (**count as f64 / total_event_ids as f64) * 100.0;
+        let msg = "".to_string();
+        let event = event_mapping.get(*event_id).unwrap_or(&msg);
+        md_file
+            .write_all(
+                format!(
+                    "| {} | {} | {} | {:.2}% |\n",
+                    event_id, event, count, percentage
+                )
+                    .as_bytes(),
+            )
+            .ok();
+        let percentage = format!("{:.2}%", percentage);
+        wtr.write_record([event_id, event, &count.to_string(), &percentage])?;
+    }
+    wtr.flush()?;
+
     draw_pie_chart();
     Ok(())
 }
@@ -201,15 +201,13 @@ fn draw_pie_chart() {
         .map(|(source, total_percentage)| (total_percentage, source))
         .collect();
 
-    let chart = Chart::new()
-        .legend(Legend::new().top("bottom"))
-        .series(
-            Pie::new()
-                .radius(vec!["50", "250"])
-                .center(vec!["80%", "80%"])
-                .item_style(ItemStyle::new().border_radius(8))
-                .data(source_percentage_vec),
-        );
+    let chart = Chart::new().legend(Legend::new().top("bottom")).series(
+        Pie::new()
+            .radius(vec!["50", "250"])
+            .center(vec!["50%", "50%"])
+            .item_style(ItemStyle::new().border_radius(8))
+            .data(source_percentage_vec),
+    );
 
     let mut renderer = ImageRenderer::new(1000, 800);
     renderer
