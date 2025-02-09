@@ -1,3 +1,6 @@
+## Top Sigma log sources graph
+![Top Sigma log sources](Windows-Events-with-Sigma-Rules.svg)
+## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
 | process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2679 | 58.15% | 2679 | sysmon<br>non-default |
@@ -11,8 +14,8 @@
 | registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.74% | 80 | sysmon<br>non-default |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.35% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 35 | 0.76% | 35 | sysmon |
-| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.69% | 32 | sysmon |
+| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 24 | 0.52% | 24 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.46% | 21 | default |
