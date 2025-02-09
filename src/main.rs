@@ -184,7 +184,7 @@ fn draw_pie_chart() {
 
     let mut renderer = ImageRenderer::new(1000, 800);
     renderer
-        .save(&chart, "Windows-Events-with-Sigma-Rules.png")
+        .save(&chart, "Windows-Events-with-Sigma-Rules.svg")
         .ok();
 }
 
