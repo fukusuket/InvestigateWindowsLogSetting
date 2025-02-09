@@ -1,9 +1,11 @@
+use charming::component::Title;
 use charming::{component::Legend, element::ItemStyle, series::Pie, Chart, ImageRenderer};
 use csv::{ReaderBuilder, Writer};
 use std::collections::HashMap;
 use std::error::Error;
 use std::fs::File;
 use std::io::Write;
+use std::path::Path;
 use std::{env, fs};
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
@@ -159,28 +161,50 @@ fn main() -> Result<(), Box<dyn Error>> {
             ])?;
         }
     }
+    wtr.flush()?;
+
     draw_pie_chart();
     Ok(())
 }
 
 fn draw_pie_chart() {
-    let chart = Chart::new().legend(Legend::new().top("bottom")).series(
-        Pie::new()
-            .name("Windows Events with Sigma Rules")
-            .radius(vec!["50", "250"])
-            .center(vec!["50%", "50%"])
-            .item_style(ItemStyle::new().border_radius(8))
-            .data(vec![
-                (40.0, "rose 1"),
-                (38.0, "rose 2"),
-                (32.0, "rose 3"),
-                (30.0, "rose 4"),
-                (28.0, "rose 5"),
-                (26.0, "rose 6"),
-                (22.0, "rose 7"),
-                (18.0, "rose 8"),
-            ]),
-    );
+    let file_path = "sigma_eid.csv";
+    let mut rdr = ReaderBuilder::new()
+        .from_path(Path::new(file_path))
+        .unwrap();
+    let mut source_percentage: HashMap<String, f64> = HashMap::new();
+    for result in rdr.records() {
+        let record = result.unwrap();
+        let source = record.get(5).unwrap_or("").to_string().replace("<br>", "/");
+        let percentage: f64 = record
+            .get(3)
+            .unwrap_or("0")
+            .trim_end_matches('%')
+            .parse()
+            .unwrap_or(0.0);
+        *source_percentage.entry(source).or_insert(0.0) += percentage;
+    }
+
+    let source_percentage_vec: Vec<(f64, String)> = source_percentage
+        .into_iter()
+        .map(|(source, total_percentage)| (total_percentage, source))
+        .collect();
+
+    let chart = Chart::new()
+        .title(
+            Title::new()
+                .text("Windows Events with Sigma Rules")
+                .left("center"),
+        )
+        .legend(Legend::new().top("bottom"))
+        .series(
+            Pie::new()
+                .name("Windows Events with Sigma Rules")
+                .radius(vec!["50", "250"])
+                .center(vec!["50%", "50%"])
+                .item_style(ItemStyle::new().border_radius(8))
+                .data(source_percentage_vec),
+        );
 
     let mut renderer = ImageRenderer::new(1000, 800);
     renderer
