@@ -7,16 +7,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
-| 5379 | Credential Manager credentials were read | 2 | 0.12% |
 | 4634 | Account logoff | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 4769 | Kerberos service ticket requested | 2 | 0.12% |
-| 6410 | Code integrity determined that a file does not meet the security requirements to load into a process | 1 | 0.06% |
-| 4778 | Window station session reconnected | 1 | 0.06% |
-| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
-| 5136 | Directory service object modified | 1 | 0.06% |
+| 5379 | Credential Manager credentials were read | 2 | 0.12% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 4697 | Service installed | 1 | 0.06% |
+| 4698 | Scheduled task created | 1 | 0.06% |
 | 4674 | Privileged object operation attempt | 1 | 0.06% |
-| 5145 | Network share object checked for client access | 1 | 0.06% |
+| 4672 | Admin logon | 1 | 0.06% |
+| 5140 | Network share object accessed | 1 | 0.06% |
+| 4673 | Privileged service called | 1 | 0.06% |
