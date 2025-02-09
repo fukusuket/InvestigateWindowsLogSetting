@@ -14,13 +14,13 @@
 | registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.74% | 80 | sysmon<br>non-default |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.35% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 35 | 0.76% | 35 | sysmon |
-| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.69% | 32 | sysmon |
+| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 24 | 0.52% | 24 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.46% | 21 | default |
-| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon<br>non-default |
 | pipe_created | Microsoft-Windows-Sysmon/Operational:17,18 | 20 | 0.43% | 20 | sysmon |
+| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon<br>non-default |
 | create_remote_thread | Microsoft-Windows-Sysmon/Operational:8 | 16 | 0.35% | 16 | sysmon |
 | file_delete | Microsoft-Windows-Sysmon/Operational:23,26 | 14 | 0.30% | 14 | sysmon |
 ## Top Security Event IDs graph
@@ -35,16 +35,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4720 | User account created | 2 | 0.12% |
 | 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 4720 | User account created | 2 | 0.12% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 4634 | Account logoff | 2 | 0.12% |
 | 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 4724 | Account password reset attempt | 1 | 0.06% |
+| 5038 | Code Integrity invalid file hash | 1 | 0.06% |
+| 5140 | Network share object accessed | 1 | 0.06% |
+| 4723 | Account password change attempt | 1 | 0.06% |
 | 4672 | Admin logon | 1 | 0.06% |
-| 4825 | RDP logon failed | 1 | 0.06% |
-| 4697 | Service installed | 1 | 0.06% |
-| 4698 | Scheduled task created | 1 | 0.06% |
-| 4647 | User initiated logoff | 1 | 0.06% |
+| 4673 | Privileged service called | 1 | 0.06% |
+| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
