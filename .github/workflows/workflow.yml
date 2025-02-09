@@ -35,7 +35,7 @@ jobs:
         run: |
           git add *.md
           git add *.csv
-          get add *.svg
+          git add *.svg
           git commit -m "Automated update"
 
       - name: Push changes
