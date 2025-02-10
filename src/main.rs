@@ -6,6 +6,7 @@ use std::fs::File;
 use std::io::Write;
 use std::path::Path;
 use std::{env, fs};
+use charming::element::Emphasis;
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
 
@@ -206,9 +207,15 @@ fn draw_pie_chart() {
 
     let chart = Chart::new().legend(Legend::new().top("bottom")).series(
         Pie::new()
-            .radius(vec!["50", "250"])
-            .center(vec!["50%", "50%"])
-            .item_style(ItemStyle::new().border_radius(8))
+            .radius("50%")
+            .emphasis(
+                Emphasis::new().item_style(
+                    ItemStyle::new()
+                        .shadow_blur(10)
+                        .shadow_offset_x(0)
+                        .shadow_color("rgba(0, 0, 0, 0.5)"),
+                ),
+            )
             .data(source_percentage_vec),
     );
 
@@ -241,9 +248,15 @@ fn draw_pie_chart() {
 
     let chart = Chart::new().legend(Legend::new().top("bottom")).series(
         Pie::new()
-            .radius(vec!["50", "250"])
-            .center(vec!["50%", "50%"])
-            .item_style(ItemStyle::new().border_radius(8))
+            .radius("50%")
+            .emphasis(
+                Emphasis::new().item_style(
+                    ItemStyle::new()
+                        .shadow_blur(10)
+                        .shadow_offset_x(0)
+                        .shadow_color("rgba(0, 0, 0, 0.5)"),
+                ),
+            )
             .data(source_percentage_vec),
     );
 
