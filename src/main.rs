@@ -76,6 +76,11 @@ fn main() -> Result<(), Box<dyn Error>> {
             source = "default";
         }
         let mut source = source.to_string();
+        let mut row = format!(
+            "| {} | {} | {} | {:.2}% | {} | {} |\n",
+            category, "N/A", count, percentage, rules, source
+        );
+        let percentage = format!("{:.2}%", percentage);
         if let Some(entry) = category_mapping.get(*category) {
             let mut s = "".to_string();
             for (i, (ch, eid)) in entry.iter().enumerate() {
@@ -88,16 +93,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                     source.push_str(&format!("<br>{}", "non-default"));
                 }
             }
-            md_file
-                .write_all(
-                    format!(
-                        "| {} | {} | {} | {:.2}% | {} | {} |\n",
-                        category, s, count, percentage, rules, source
-                    )
-                    .as_bytes(),
-                )
-                .ok();
-            let percentage = format!("{:.2}%", percentage);
+            row = row.replace("N/A", &s);
+            md_file.write_all(row.as_bytes()).ok();
             wtr.write_record([
                 category,
                 &s,
@@ -107,16 +104,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 &source.to_string(),
             ])?;
         } else {
-            md_file
-                .write_all(
-                    format!(
-                        "| {} | N/A | {} | {:.2}% | {} | {} |\n",
-                        category, count, percentage, rules, source
-                    )
-                    .as_bytes(),
-                )
-                .ok();
-            let percentage = format!("{:.2}%", percentage);
+            md_file.write_all(row.as_bytes()).ok();
             wtr.write_record([
                 category,
                 "N/A",
