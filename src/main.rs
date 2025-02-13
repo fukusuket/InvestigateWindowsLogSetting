@@ -1,3 +1,4 @@
+use charming::element::Emphasis;
 use charming::{component::Legend, element::ItemStyle, series::Pie, Chart, ImageRenderer};
 use csv::{ReaderBuilder, Writer};
 use std::collections::HashMap;
@@ -6,7 +7,6 @@ use std::fs::File;
 use std::io::Write;
 use std::path::Path;
 use std::{env, fs};
-use charming::element::Emphasis;
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
 
@@ -50,27 +50,14 @@ fn main() -> Result<(), Box<dyn Error>> {
     let category_mapping = load_category_mapping("mapping.csv");
 
     let mut md_file = File::create("README.md")?;
-    md_file
-        .write_all("## Top Sigma log sources graph\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("![Top Sigma log sources](Windows-Events-with-Sigma-Rules.svg)\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("## Top Sigma log sources table\n".as_bytes())
-        .ok();
-    md_file
-        .write_all(
-            "| Category/Service | Channel/EventID | Count | Percentage | Rules | Source |\n"
-                .as_bytes(),
-        )
-        .ok();
-    md_file
-        .write_all(
-            "|------------------|-----------------|-------|------------|-------|--------|\n"
-                .as_bytes(),
-        )
-        .ok();
+    let contents = r"
+## Top Sigma log sources graph
+![Top Sigma log sources](Windows-Events-with-Sigma-Rules.svg)
+## Top Sigma log sources table
+| Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
+|------------------|-----------------|-------|------------|-------|--------|
+";
+    md_file.write_all(contents.as_bytes()).ok();
     let file = File::create("sigma_eid.csv")?;
     let mut wtr = Writer::from_writer(file);
     wtr.write_record([
@@ -141,21 +128,15 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
     }
     wtr.flush()?;
-    md_file
-        .write_all("## Top Security Event IDs graph\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("![Top Security Event IDs](Windows-Events-Security-IDs.svg)\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("## Top Security Event IDs table\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("| EventId | Event | Count | Percentage |\n".as_bytes())
-        .ok();
-    md_file
-        .write_all("|---------|-------|-------|------------|\n".as_bytes())
-        .ok();
+    let contents = r"
+## Top Security Event IDs graph
+![Top Security Event IDs](Windows-Events-Security-IDs.svg)
+
+## Top Security Event IDs table
+| EventId | Event | Count | Percentage |
+|---------|-------|-------|------------|
+";
+    md_file.write_all(contents.as_bytes()).ok();
 
     let file = File::create("security_eid.csv")?;
     let mut wtr = Writer::from_writer(file);
@@ -170,7 +151,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                     "| {} | {} | {} | {:.2}% |\n",
                     event_id, event, count, percentage
                 )
-                    .as_bytes(),
+                .as_bytes(),
             )
             .ok();
         let percentage = format!("{:.2}%", percentage);
@@ -183,9 +164,27 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 fn draw_pie_chart() {
-    let file_path = "sigma_eid.csv";
+    fn draw(data: Vec<(f64, String)>, file_name: &str) {
+        let chart = Chart::new().legend(Legend::new().top("bottom")).series(
+            Pie::new()
+                .radius("50%")
+                .emphasis(
+                    Emphasis::new().item_style(
+                        ItemStyle::new()
+                            .shadow_blur(10)
+                            .shadow_offset_x(0)
+                            .shadow_color("rgba(0, 0, 0, 0.5)"),
+                    ),
+                )
+                .data(data),
+        );
+
+        let mut renderer = ImageRenderer::new(1000, 800);
+        renderer.save(&chart, file_name).ok();
+    }
+
     let mut rdr = ReaderBuilder::new()
-        .from_path(Path::new(file_path))
+        .from_path(Path::new("sigma_eid.csv"))
         .unwrap();
     let mut source_percentage: HashMap<String, f64> = HashMap::new();
     for result in rdr.records() {
@@ -204,29 +203,10 @@ fn draw_pie_chart() {
         .into_iter()
         .map(|(source, total_percentage)| (total_percentage, source))
         .collect();
+    draw(source_percentage_vec, "Windows-Events-with-Sigma-Rules.svg");
 
-    let chart = Chart::new().legend(Legend::new().top("bottom")).series(
-        Pie::new()
-            .radius("50%")
-            .emphasis(
-                Emphasis::new().item_style(
-                    ItemStyle::new()
-                        .shadow_blur(10)
-                        .shadow_offset_x(0)
-                        .shadow_color("rgba(0, 0, 0, 0.5)"),
-                ),
-            )
-            .data(source_percentage_vec),
-    );
-
-    let mut renderer = ImageRenderer::new(1000, 800);
-    renderer
-        .save(&chart, "Windows-Events-with-Sigma-Rules.svg")
-        .ok();
-
-    let file_path = "security_eid.csv";
     let mut rdr = ReaderBuilder::new()
-        .from_path(Path::new(file_path))
+        .from_path(Path::new("security_eid.csv"))
         .unwrap();
     let mut source_percentage: HashMap<String, f64> = HashMap::new();
     for result in rdr.records().take(10) {
@@ -245,26 +225,7 @@ fn draw_pie_chart() {
         .into_iter()
         .map(|(source, total_percentage)| (total_percentage, source))
         .collect();
-
-    let chart = Chart::new().legend(Legend::new().top("bottom")).series(
-        Pie::new()
-            .radius("50%")
-            .emphasis(
-                Emphasis::new().item_style(
-                    ItemStyle::new()
-                        .shadow_blur(10)
-                        .shadow_offset_x(0)
-                        .shadow_color("rgba(0, 0, 0, 0.5)"),
-                ),
-            )
-            .data(source_percentage_vec),
-    );
-
-    let mut renderer = ImageRenderer::new(1000, 800);
-    renderer
-        .save(&chart, "Windows-Events-Security-IDs.svg")
-        .ok();
-
+    draw(source_percentage_vec, "Windows-Events-Security-IDs.svg");
 }
 
 fn load_event_mapping(file_path: &str) -> HashMap<String, String> {
