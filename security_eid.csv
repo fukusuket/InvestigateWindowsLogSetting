@@ -1,21 +1,21 @@
 EventId,Event,Count,Percentage
-4688,Process created,1299,77.83%
-4657,Registry value modified,266,15.94%
-5156,Firewall allowed a connection,40,2.40%
+4688,Process created,1301,77.86%
+4657,Registry value modified,266,15.92%
+5156,Firewall allowed a connection,40,2.39%
 4624,Logon success,17,1.02%
 4625,Logon failure,5,0.30%
 4648,Explicit logon,4,0.24%
 4728,Member added to security-enabled global group,3,0.18%
-4732,Member added to security-enabled local group,2,0.12%
-4634,Account logoff,2,0.12%
 5379,Credential Manager credentials were read,2,0.12%
-4769,Kerberos service ticket requested,2,0.12%
-4720,User account created,2,0.12%
 4768,Kerberos authentication ticket (TGT) requested,2,0.12%
+4634,Account logoff,2,0.12%
+4769,Kerberos service ticket requested,2,0.12%
+4732,Member added to security-enabled local group,2,0.12%
+4720,User account created,2,0.12%
 4611,A trusted logon process has been registered with the Local Security Authority,2,0.12%
-4674,Privileged object operation attempt,1,0.06%
+4825,RDP logon failed,1,0.06%
+4699,Scheduled task deleted,1,0.06%
+4723,Account password change attempt,1,0.06%
 1102,Audit log cleared,1,0.06%
-5157,Firewall blocked a connection,1,0.06%
-5140,Network share object accessed,1,0.06%
+4776,DC attempted to validate account credentials,1,0.06%
 4779,Window station session disconnected,1,0.06%
-6410,Code integrity determined that a file does not meet the security requirements to load into a process,1,0.06%
