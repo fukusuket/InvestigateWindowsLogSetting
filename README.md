@@ -4,24 +4,24 @@
 ## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
-| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2683 | 58.17% | 2683 | sysmon |
-| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.37% | 432 | sysmon |
-| security | Security | 253 | 5.49% | 253 | default |
+| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2683 | 58.16% | 2683 | sysmon |
+| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.36% | 432 | sysmon |
+| security | Security | 253 | 5.48% | 253 | default |
 | file_event | Microsoft-Windows-Sysmon/Operational:11 | 209 | 4.53% | 209 | sysmon |
 | ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 184 | 3.99% | 184 | default |
-| image_load | Microsoft-Windows-Sysmon/Operational:7 | 119 | 2.58% | 119 | sysmon |
+| image_load | Microsoft-Windows-Sysmon/Operational:7 | 120 | 2.60% | 120 | sysmon |
 | network_connection | Microsoft-Windows-Sysmon/Operational:3<br>Security:5156 | 104 | 2.25% | 104 | sysmon |
 | system | System | 94 | 2.04% | 94 | default |
 | registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.73% | 80 | sysmon |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.34% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 35 | 0.76% | 35 | sysmon |
-| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.69% | 32 | sysmon |
+| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 24 | 0.52% | 24 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.46% | 21 | default |
-| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
 | pipe_created | Microsoft-Windows-Sysmon/Operational:17,18 | 20 | 0.43% | 20 | sysmon |
+| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
 | create_remote_thread | Microsoft-Windows-Sysmon/Operational:8 | 16 | 0.35% | 16 | sysmon |
 | file_delete | Microsoft-Windows-Sysmon/Operational:23,26 | 14 | 0.30% | 14 | sysmon |
 
@@ -38,16 +38,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
-| 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 5379 | Credential Manager credentials were read | 2 | 0.12% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 4634 | Account logoff | 2 | 0.12% |
-| 5140 | Network share object accessed | 1 | 0.06% |
-| 4647 | User initiated logoff | 1 | 0.06% |
-| 5157 | Firewall blocked a connection | 1 | 0.06% |
-| 4699 | Scheduled task deleted | 1 | 0.06% |
-| 4723 | Account password change attempt | 1 | 0.06% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 5038 | Code Integrity invalid file hash | 1 | 0.06% |
+| 6410 | Code integrity determined that a file does not meet the security requirements to load into a process | 1 | 0.06% |
 | 6281 | Code Integrity determined that the page hashes of an image file are not valid  | 1 | 0.06% |
+| 4674 | Privileged object operation attempt | 1 | 0.06% |
+| 5157 | Firewall blocked a connection | 1 | 0.06% |
+| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
