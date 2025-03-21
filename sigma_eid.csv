@@ -1,9 +1,9 @@
 Category/Service,Channel/EventID,Count,Percentage,Rules,Source
-process_creation,Microsoft-Windows-Sysmon/Operational:1<br>Security:4688,2685,58.15%,2685,sysmon<br>non-default
-registry_set,Microsoft-Windows-Sysmon/Operational:13,432,9.36%,432,sysmon
-security,Security,254,5.50%,254,default
+process_creation,Microsoft-Windows-Sysmon/Operational:1<br>Security:4688,2685,58.14%,2685,sysmon<br>non-default
+registry_set,Microsoft-Windows-Sysmon/Operational:13,432,9.35%,432,sysmon
+security,Security,255,5.52%,255,default
 file_event,Microsoft-Windows-Sysmon/Operational:11,209,4.53%,209,sysmon
-ps_script,"Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104",184,3.99%,184,default
+ps_script,"Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104",184,3.98%,184,default
 image_load,Microsoft-Windows-Sysmon/Operational:7,121,2.62%,121,sysmon
 network_connection,Microsoft-Windows-Sysmon/Operational:3<br>Security:5156,104,2.25%,104,sysmon<br>non-default
 system,System,94,2.04%,94,default

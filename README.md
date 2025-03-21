@@ -4,11 +4,11 @@
 ## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
-| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2685 | 58.15% | 2685 | sysmon |
-| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.36% | 432 | sysmon |
-| security | Security | 254 | 5.50% | 254 | default |
+| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2685 | 58.14% | 2685 | sysmon |
+| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.35% | 432 | sysmon |
+| security | Security | 255 | 5.52% | 255 | default |
 | file_event | Microsoft-Windows-Sysmon/Operational:11 | 209 | 4.53% | 209 | sysmon |
-| ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 184 | 3.99% | 184 | default |
+| ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 184 | 3.98% | 184 | default |
 | image_load | Microsoft-Windows-Sysmon/Operational:7 | 121 | 2.62% | 121 | sysmon |
 | network_connection | Microsoft-Windows-Sysmon/Operational:3<br>Security:5156 | 104 | 2.25% | 104 | sysmon |
 | system | System | 94 | 2.04% | 94 | default |
@@ -39,15 +39,15 @@
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
 | 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4634 | Account logoff | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 5379 | Credential Manager credentials were read | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 1102 | Audit log cleared | 1 | 0.06% |
-| 4699 | Scheduled task deleted | 1 | 0.06% |
-| 4673 | Privileged service called | 1 | 0.06% |
-| 4672 | Admin logon | 1 | 0.06% |
-| 4825 | RDP logon failed | 1 | 0.06% |
-| 4698 | Scheduled task created | 1 | 0.06% |
+| 5379 | Credential Manager credentials were read | 2 | 0.12% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 4634 | Account logoff | 2 | 0.12% |
+| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
+| 6281 | Code Integrity determined that the page hashes of an image file are not valid  | 1 | 0.06% |
+| 4779 | Window station session disconnected | 1 | 0.06% |
+| 4723 | Account password change attempt | 1 | 0.06% |
+| 5157 | Firewall blocked a connection | 1 | 0.06% |
+| 4674 | Privileged object operation attempt | 1 | 0.06% |
