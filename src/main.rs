@@ -177,14 +177,22 @@ fn draw_pie_chart() {
     let mut source_percentage: HashMap<String, f64> = HashMap::new();
     for result in rdr.records() {
         let record = result.unwrap();
-        let source = record.get(5).unwrap_or("").to_string().replace("<br>", "/");
-        let percentage: f64 = record
-            .get(3)
-            .unwrap_or("0")
-            .trim_end_matches('%')
-            .parse()
-            .unwrap_or(0.0);
-        *source_percentage.entry(source).or_insert(0.0) += percentage;
+        let sources = record.get(5).unwrap_or("").to_string();
+        let sources: Vec<&str> = sources.split("<br>").collect();
+        for source in sources {
+            let percentage: f64 = record
+                .get(3)
+                .unwrap_or("0")
+                .trim_end_matches('%')
+                .parse()
+                .unwrap_or(0.0);
+            let percentage = if source.len() == 2 {
+                percentage * 0.5
+            } else {
+                percentage
+            };
+            *source_percentage.entry(source.to_string()).or_insert(0.0) += percentage;
+        }
     }
 
     let source_percentage_vec: Vec<(f64, String)> = source_percentage
