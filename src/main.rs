@@ -7,6 +7,7 @@ use std::fs::File;
 use std::io::Write;
 use std::path::Path;
 use std::{env, fs};
+use charming::component::Title;
 use walkdir::WalkDir;
 use yaml_rust2::{Yaml, YamlLoader};
 
@@ -153,7 +154,11 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 fn draw_pie_chart() {
     fn draw(data: Vec<(f64, String)>, file_name: &str) {
-        let chart = Chart::new().legend(Legend::new().top("bottom")).series(
+        let chart = Chart::new()        .title(
+            Title::new()
+                .text("Windows Events with Sigma Rules")
+                .left("center"),)
+            .legend(Legend::new().top("bottom")).series(
             Pie::new()
                 .radius("50%")
                 .emphasis(
