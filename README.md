@@ -4,24 +4,24 @@
 ## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
-| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2685 | 58.13% | 2685 | sysmon |
+| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2685 | 58.12% | 2685 | sysmon |
 | registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.35% | 432 | sysmon |
 | security | Security | 255 | 5.52% | 255 | default |
 | file_event | Microsoft-Windows-Sysmon/Operational:11 | 209 | 4.52% | 209 | sysmon |
-| ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 184 | 3.98% | 184 | default |
+| ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 185 | 4.00% | 185 | default |
 | image_load | Microsoft-Windows-Sysmon/Operational:7 | 121 | 2.62% | 121 | sysmon |
 | network_connection | Microsoft-Windows-Sysmon/Operational:3<br>Security:5156 | 104 | 2.25% | 104 | sysmon |
 | system | System | 95 | 2.06% | 95 | default |
 | registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.73% | 80 | sysmon |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.34% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 35 | 0.76% | 35 | sysmon |
-| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.69% | 32 | sysmon |
+| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 24 | 0.52% | 24 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.45% | 21 | default |
-| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
 | pipe_created | Microsoft-Windows-Sysmon/Operational:17,18 | 20 | 0.43% | 20 | sysmon |
+| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
 | create_remote_thread | Microsoft-Windows-Sysmon/Operational:8 | 16 | 0.35% | 16 | sysmon |
 | file_delete | Microsoft-Windows-Sysmon/Operational:23,26 | 14 | 0.30% | 14 | sysmon |
 
@@ -38,16 +38,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4634 | Account logoff | 2 | 0.12% |
-| 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 4720 | User account created | 2 | 0.12% |
 | 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 5157 | Firewall blocked a connection | 1 | 0.06% |
+| 5379 | Credential Manager credentials were read | 2 | 0.12% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 4720 | User account created | 2 | 0.12% |
+| 4634 | Account logoff | 2 | 0.12% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
+| 4672 | Admin logon | 1 | 0.06% |
 | 4698 | Scheduled task created | 1 | 0.06% |
-| 4825 | RDP logon failed | 1 | 0.06% |
-| 5145 | Network share object checked for client access | 1 | 0.06% |
-| 5136 | Directory service object modified | 1 | 0.06% |
-| 4697 | Service installed | 1 | 0.06% |
+| 6281 | Code Integrity determined that the page hashes of an image file are not valid  | 1 | 0.06% |
+| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
+| 4779 | Window station session disconnected | 1 | 0.06% |
+| 5038 | Code Integrity invalid file hash | 1 | 0.06% |
