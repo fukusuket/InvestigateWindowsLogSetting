@@ -1,21 +1,21 @@
 Category/Service,Channel/EventID,Count,Percentage,Rules,Source
-process_creation,Microsoft-Windows-Sysmon/Operational:1<br>Security:4688,2690,58.02%,2690,sysmon<br>non-default
-registry_set,Microsoft-Windows-Sysmon/Operational:13,432,9.32%,432,sysmon
+process_creation,Microsoft-Windows-Sysmon/Operational:1<br>Security:4688,2692,58.04%,2692,sysmon<br>non-default
+registry_set,Microsoft-Windows-Sysmon/Operational:13,432,9.31%,432,sysmon
 security,Security,255,5.50%,255,default
 file_event,Microsoft-Windows-Sysmon/Operational:11,209,4.51%,209,sysmon
 ps_script,"Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104",187,4.03%,187,default
 image_load,Microsoft-Windows-Sysmon/Operational:7,121,2.61%,121,sysmon
 network_connection,Microsoft-Windows-Sysmon/Operational:3<br>Security:5156,104,2.24%,104,sysmon<br>non-default
 system,System,97,2.09%,97,default
-registry_event,"Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657",80,1.73%,80,sysmon<br>non-default
+registry_event,"Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657",80,1.72%,80,sysmon<br>non-default
 sysmon,Microsoft-Windows-Sysmon/Operational,62,1.34%,62,sysmon
 ps_module,"Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103",36,0.78%,36,sysmon
-process_access,Microsoft-Windows-Sysmon/Operational:10,32,0.69%,32,sysmon
 driver_load,Microsoft-Windows-Sysmon/Operational:6,32,0.69%,32,sysmon
+process_access,Microsoft-Windows-Sysmon/Operational:10,32,0.69%,32,sysmon
 application,Application,30,0.65%,30,default
 dns_query,Microsoft-Windows-Sysmon/Operational:22,24,0.52%,24,sysmon
 windefend,Microsoft-Windows-Windows Defender/Operational,21,0.45%,21,default
 registry_add,Microsoft-Windows-Sysmon/Operational:12<br>Security:4657,20,0.43%,20,sysmon<br>non-default
 pipe_created,"Microsoft-Windows-Sysmon/Operational:17,18",20,0.43%,20,sysmon
-create_remote_thread,Microsoft-Windows-Sysmon/Operational:8,16,0.35%,16,sysmon
+create_remote_thread,Microsoft-Windows-Sysmon/Operational:8,16,0.34%,16,sysmon
 file_delete,"Microsoft-Windows-Sysmon/Operational:23,26",14,0.30%,14,sysmon
