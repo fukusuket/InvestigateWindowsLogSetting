@@ -1,56 +1,56 @@
 <svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 800">
 <rect width="1000" height="800" x="0" y="0" id="0" fill="none"></rect>
 <polyline points="621.2 559.1 630.3 571 645.3 571" fill="none" stroke="#5470c6"></polyline>
-<polyline points="311.8 332.3 299.4 337.2 284.4 337.2" fill="none" stroke="#91cc75"></polyline>
-<polyline points="318 317.1 304.2 323.1 289.2 323.1" fill="none" stroke="#fac858"></polyline>
-<polyline points="318.8 315.3 310.2 309 295.2 309" fill="none" stroke="#ee6666"></polyline>
-<polyline points="383.4 237.5 345.7 255.5 330.7 255.5" fill="none" stroke="#73c0de"></polyline>
-<polyline points="477.9 201.2 344.8 241.4 344.8 241.4" fill="none" stroke="#3ba272"></polyline>
-<polyline points="485.1 200.6 361.8 227.3 361.8 227.3" fill="none" stroke="#fc8452"></polyline>
-<polyline points="493.5 200.1 383.4 213.2 383.4 213.2" fill="none" stroke="#9a60b4"></polyline>
-<polyline points="496.2 200 428.2 199.1 413.2 199.1" fill="none" stroke="#ea7ccc"></polyline>
-<polyline points="498.5 200 498.3 185 483.3 185" fill="none" stroke="#5470c6"></polyline>
+<polyline points="307.4 346.1 290.6 384.3 275.6 384.3" fill="none" stroke="#91cc75"></polyline>
+<polyline points="308.1 343.6 292.1 370.2 277.1 370.2" fill="none" stroke="#fac858"></polyline>
+<polyline points="308.9 341 294.5 356.1 279.5 356.1" fill="none" stroke="#ee6666"></polyline>
+<polyline points="309.6 338.8 297.9 342 282.9 342" fill="none" stroke="#73c0de"></polyline>
+<polyline points="315.4 323 302.4 327.9 287.4 327.9" fill="none" stroke="#3ba272"></polyline>
+<polyline points="322.2 308.4 308 313.8 293 313.8" fill="none" stroke="#fc8452"></polyline>
+<polyline points="323.1 306.7 314.8 299.7 299.8 299.7" fill="none" stroke="#9a60b4"></polyline>
+<polyline points="391.7 231.9 388.3 219.3 373.3 219.3" fill="none" stroke="#ea7ccc"></polyline>
+<polyline points="493.5 200.1 493.1 185.1 478.1 185.1" fill="none" stroke="#5470c6"></polyline>
 <path d="M500 200A200 200 0 1 1 307.2 346.9L500 400Z" fill="#5470c6"></path>
-<path d="M307.2 346.9A200 200 0 0 1 317.5 318.1L500 400Z" fill="#91cc75"></path>
-<path d="M317.5 318.1A200 200 0 0 1 318.5 316L500 400Z" fill="#fac858"></path>
-<path d="M318.5 316A200 200 0 0 1 319.1 314.6L500 400Z" fill="#ee6666"></path>
-<path d="M319.1 314.6A200 200 0 0 1 477.1 201.3L500 400Z" fill="#73c0de"></path>
-<path d="M477.1 201.3A200 200 0 0 1 478.7 201.1L500 400Z" fill="#3ba272"></path>
-<path d="M478.7 201.1A200 200 0 0 1 491.6 200.2L500 400Z" fill="#fc8452"></path>
-<path d="M491.6 200.2A200 200 0 0 1 495.4 200.1L500 400Z" fill="#9a60b4"></path>
-<path d="M495.4 200.1A200 200 0 0 1 496.9 200L500 400Z" fill="#ea7ccc"></path>
-<path d="M496.9 200A200 200 0 0 1 500 200L500 400Z" fill="#5470c6"></path>
+<path d="M307.2 346.9A200 200 0 0 1 307.6 345.4L500 400Z" fill="#91cc75"></path>
+<path d="M307.6 345.4A200 200 0 0 1 308.7 341.7L500 400Z" fill="#fac858"></path>
+<path d="M308.7 341.7A200 200 0 0 1 309.1 340.2L500 400Z" fill="#ee6666"></path>
+<path d="M309.1 340.2A200 200 0 0 1 310.1 337.3L500 400Z" fill="#73c0de"></path>
+<path d="M310.1 337.3A200 200 0 0 1 321.8 309.1L500 400Z" fill="#3ba272"></path>
+<path d="M321.8 309.1A200 200 0 0 1 322.5 307.8L500 400Z" fill="#fc8452"></path>
+<path d="M322.5 307.8A200 200 0 0 1 323.6 305.7L500 400Z" fill="#9a60b4"></path>
+<path d="M323.6 305.7A200 200 0 0 1 487.1 200.4L500 400Z" fill="#ea7ccc"></path>
+<path d="M487.1 200.4A200 200 0 0 1 500 200L500 400Z" fill="#5470c6"></path>
 <text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(650.2804 571.0322)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Process created</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(279.3727 337.183)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Firewall allowed a connection</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(284.2163 323.083)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Member added to security-enabled global group</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(290.1966 308.983)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">A trusted logon process has been register...</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(325.735 255.5063)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Registry value modified</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(339.7566 241.4063)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Kerberos service ticket requested</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(356.8256 227.3063)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Logon success</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(378.3958 213.2063)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Logon failure</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(408.1692 199.1063)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Member added to security-enabled local group</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(478.3494 185.0063)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Explicit logon</text>
-<path d="M-5 -5l955.4 0l0 72l-955.4 0Z" transform="translate(27.32 733)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0"></path>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(27.32 733)" fill="#5470c6"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(27.32 733)" fill="#333">Process created</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(154.32 733)" fill="#91cc75"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(154.32 733)" fill="#333">Firewall allowed a connection</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(351.52 733)" fill="#fac858"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(351.52 733)" fill="#333">Member added to security-enabled global group</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(27.32 757)" fill="#ee6666"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(27.32 757)" fill="#333">A trusted logon process has been registered with the Local Security Authority</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(478.56 757)" fill="#73c0de"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(478.56 757)" fill="#333">Registry value modified</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(643.6 757)" fill="#3ba272"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(643.6 757)" fill="#333">Kerberos service ticket requested</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(862.28 757)" fill="#fc8452"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(862.28 757)" fill="#333">Logon success</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(27.32 781)" fill="#9a60b4"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(27.32 781)" fill="#333">Logon failure</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(137.04 781)" fill="#ea7ccc"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(137.04 781)" fill="#333">Member added to security-enabled local group</text>
-<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(425.44 781)" fill="#5470c6"></path>
-<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(425.44 781)" fill="#333">Explicit logon</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(270.5695 384.3451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Credential Manager credentials were read</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(272.0647 370.2451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Logon failure</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(274.5109 356.1451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">User account created</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(277.9418 342.0451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Explicit logon</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(282.4075 327.9451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Firewall allowed a connection</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(287.9784 313.8451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Kerberos service ticket requested</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(294.7515 299.7451)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Member added to security-enabled global group</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(368.2811 219.2557)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Registry value modified</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" transform="translate(473.0549 185.1122)" fill="#333" stroke="rgb(255,255,255)" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Logon success</text>
+<path d="M-5 -5l963.5 0l0 48l-963.5 0Z" transform="translate(23.26 757)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(23.26 757)" fill="#5470c6"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(23.26 757)" fill="#333">Process created</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(150.26 757)" fill="#91cc75"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(150.26 757)" fill="#333">Credential Manager credentials were read</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(414.42 757)" fill="#fac858"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(414.42 757)" fill="#333">Logon failure</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(524.14 757)" fill="#ee6666"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(524.14 757)" fill="#333">User account created</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(678.62 757)" fill="#73c0de"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(678.62 757)" fill="#333">Explicit logon</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(789.54 757)" fill="#3ba272"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(789.54 757)" fill="#333">Firewall allowed a connection</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(23.26 781)" fill="#fc8452"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(23.26 781)" fill="#333">Kerberos service ticket requested</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(241.94 781)" fill="#9a60b4"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(241.94 781)" fill="#333">Member added to security-enabled global group</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(537.78 781)" fill="#ea7ccc"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(537.78 781)" fill="#333">Registry value modified</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(702.82 781)" fill="#5470c6"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(702.82 781)" fill="#333">Logon success</text>
 <path d="M-143.9 -5l287.7 0l0 28l-287.7 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0"></path>
 <text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#464646">Windows Events with Sigma Rules</text>
 </svg>
