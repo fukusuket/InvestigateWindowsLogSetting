@@ -15,8 +15,8 @@
 | registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.72% | 80 | sysmon |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.34% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 36 | 0.78% | 36 | sysmon |
-| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.69% | 32 | sysmon |
+| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 24 | 0.52% | 24 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.45% | 21 | default |
@@ -38,16 +38,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4634 | Account logoff | 2 | 0.12% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 5379 | Credential Manager credentials were read | 2 | 0.12% |
 | 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4723 | Account password change attempt | 1 | 0.06% |
+| 4634 | Account logoff | 2 | 0.12% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 5157 | Firewall blocked a connection | 1 | 0.06% |
+| 5145 | Network share object checked for client access | 1 | 0.06% |
 | 4741 | Computer account created | 1 | 0.06% |
-| 5136 | Directory service object modified | 1 | 0.06% |
-| 4674 | Privileged object operation attempt | 1 | 0.06% |
-| 4697 | Service installed | 1 | 0.06% |
-| 4699 | Scheduled task deleted | 1 | 0.06% |
+| 4673 | Privileged service called | 1 | 0.06% |
+| 4672 | Admin logon | 1 | 0.06% |
+| 5140 | Network share object accessed | 1 | 0.06% |
