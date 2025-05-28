@@ -4,19 +4,19 @@
 ## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
-| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2696 | 58.03% | 2696 | sysmon |
-| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.30% | 432 | sysmon |
+| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2696 | 58.00% | 2696 | sysmon |
+| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.29% | 432 | sysmon |
 | security | Security | 256 | 5.51% | 256 | default |
-| file_event | Microsoft-Windows-Sysmon/Operational:11 | 209 | 4.50% | 209 | sysmon |
+| file_event | Microsoft-Windows-Sysmon/Operational:11 | 211 | 4.54% | 211 | sysmon |
 | ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 187 | 4.02% | 187 | default |
-| image_load | Microsoft-Windows-Sysmon/Operational:7 | 122 | 2.63% | 122 | sysmon |
+| image_load | Microsoft-Windows-Sysmon/Operational:7 | 122 | 2.62% | 122 | sysmon |
 | network_connection | Microsoft-Windows-Sysmon/Operational:3<br>Security:5156 | 104 | 2.24% | 104 | sysmon |
 | system | System | 98 | 2.11% | 98 | default |
 | registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.72% | 80 | sysmon |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.33% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 36 | 0.77% | 36 | sysmon |
-| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.69% | 32 | sysmon |
+| process_access | Microsoft-Windows-Sysmon/Operational:10 | 32 | 0.69% | 32 | sysmon |
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 25 | 0.54% | 25 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.45% | 21 | default |
@@ -38,16 +38,16 @@
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4634 | Account logoff | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 4720 | User account created | 2 | 0.12% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 4634 | Account logoff | 2 | 0.12% |
+| 4720 | User account created | 2 | 0.12% |
 | 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 6410 | Code integrity determined that a file does not meet the security requirements to load into a process | 1 | 0.06% |
-| 4776 | DC attempted to validate account credentials | 1 | 0.06% |
-| 1102 | Audit log cleared | 1 | 0.06% |
-| 4673 | Privileged service called | 1 | 0.06% |
-| 4674 | Privileged object operation attempt | 1 | 0.06% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
+| 4825 | RDP logon failed | 1 | 0.06% |
 | 4697 | Service installed | 1 | 0.06% |
+| 4674 | Privileged object operation attempt | 1 | 0.06% |
+| 4673 | Privileged service called | 1 | 0.06% |
+| 4724 | Account password reset attempt | 1 | 0.06% |
+| 5140 | Network share object accessed | 1 | 0.06% |
