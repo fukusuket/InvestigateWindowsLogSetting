@@ -4,7 +4,7 @@
 ## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
-| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2696 | 58.00% | 2696 | sysmon |
+| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2698 | 58.02% | 2698 | sysmon |
 | registry_set | Microsoft-Windows-Sysmon/Operational:13 | 432 | 9.29% | 432 | sysmon |
 | security | Security | 256 | 5.51% | 256 | default |
 | file_event | Microsoft-Windows-Sysmon/Operational:11 | 211 | 4.54% | 211 | sysmon |
@@ -20,8 +20,8 @@
 | application | Application | 30 | 0.65% | 30 | default |
 | dns_query | Microsoft-Windows-Sysmon/Operational:22 | 25 | 0.54% | 25 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.45% | 21 | default |
-| pipe_created | Microsoft-Windows-Sysmon/Operational:17,18 | 20 | 0.43% | 20 | sysmon |
 | registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
+| pipe_created | Microsoft-Windows-Sysmon/Operational:17,18 | 20 | 0.43% | 20 | sysmon |
 | create_remote_thread | Microsoft-Windows-Sysmon/Operational:8 | 16 | 0.34% | 16 | sysmon |
 | file_delete | Microsoft-Windows-Sysmon/Operational:23,26 | 14 | 0.30% | 14 | sysmon |
 
@@ -31,23 +31,23 @@
 ## Top Security Event IDs table
 | EventId | Event | Count | Percentage |
 |---------|-------|-------|------------|
-| 4688 | Process created | 1307 | 77.89% |
-| 4657 | Registry value modified | 266 | 15.85% |
+| 4688 | Process created | 1308 | 77.90% |
+| 4657 | Registry value modified | 266 | 15.84% |
 | 5156 | Firewall allowed a connection | 40 | 2.38% |
 | 4624 | Logon success | 17 | 1.01% |
 | 4625 | Logon failure | 5 | 0.30% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
+| 4634 | Account logoff | 2 | 0.12% |
 | 5379 | Credential Manager credentials were read | 2 | 0.12% |
+| 4769 | Kerberos service ticket requested | 2 | 0.12% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
 | 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
 | 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
-| 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
-| 4634 | Account logoff | 2 | 0.12% |
-| 4647 | User initiated logoff | 1 | 0.06% |
+| 4699 | Scheduled task deleted | 1 | 0.06% |
+| 4673 | Privileged service called | 1 | 0.06% |
+| 4779 | Window station session disconnected | 1 | 0.06% |
+| 4697 | Service installed | 1 | 0.06% |
 | 5136 | Directory service object modified | 1 | 0.06% |
-| 4724 | Account password reset attempt | 1 | 0.06% |
-| 6410 | Code integrity determined that a file does not meet the security requirements to load into a process | 1 | 0.06% |
-| 5157 | Firewall blocked a connection | 1 | 0.06% |
-| 1102 | Audit log cleared | 1 | 0.06% |
+| 5140 | Network share object accessed | 1 | 0.06% |
