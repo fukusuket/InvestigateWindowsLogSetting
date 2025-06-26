@@ -1,5 +1,5 @@
 Category/Service,Channel/EventID,Count,Percentage,Rules,Source
-process_creation,Microsoft-Windows-Sysmon/Operational:1<br>Security:4688,2712,58.07%,2712,sysmon<br>non-default
+process_creation,Microsoft-Windows-Sysmon/Operational:1<br>Security:4688,2714,58.09%,2714,sysmon<br>non-default
 registry_set,Microsoft-Windows-Sysmon/Operational:13,432,9.25%,432,sysmon
 security,Security,256,5.48%,256,default
 file_event,Microsoft-Windows-Sysmon/Operational:11,211,4.52%,211,sysmon
@@ -11,7 +11,7 @@ registry_event,"Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657",
 sysmon,Microsoft-Windows-Sysmon/Operational,62,1.33%,62,sysmon
 ps_module,"Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103",36,0.77%,36,sysmon
 process_access,Microsoft-Windows-Sysmon/Operational:10,33,0.71%,33,sysmon
-driver_load,Microsoft-Windows-Sysmon/Operational:6,32,0.69%,32,sysmon
+driver_load,Microsoft-Windows-Sysmon/Operational:6,32,0.68%,32,sysmon
 application,Application,31,0.66%,31,default
 dns_query,Microsoft-Windows-Sysmon/Operational:22,26,0.56%,26,sysmon
 windefend,Microsoft-Windows-Windows Defender/Operational,21,0.45%,21,default
