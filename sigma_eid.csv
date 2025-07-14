@@ -15,7 +15,7 @@ driver_load,Microsoft-Windows-Sysmon/Operational:6,32,0.68%,32,sysmon
 application,Application,31,0.66%,31,default
 dns_query,Microsoft-Windows-Sysmon/Operational:22,27,0.58%,27,sysmon
 windefend,Microsoft-Windows-Windows Defender/Operational,21,0.45%,21,default
-registry_add,Microsoft-Windows-Sysmon/Operational:12<br>Security:4657,20,0.43%,20,sysmon<br>non-default
 pipe_created,"Microsoft-Windows-Sysmon/Operational:17,18",20,0.43%,20,sysmon
+registry_add,Microsoft-Windows-Sysmon/Operational:12<br>Security:4657,20,0.43%,20,sysmon<br>non-default
 create_remote_thread,Microsoft-Windows-Sysmon/Operational:8,16,0.34%,16,sysmon
 file_delete,"Microsoft-Windows-Sysmon/Operational:23,26",14,0.30%,14,sysmon
