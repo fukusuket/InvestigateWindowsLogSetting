@@ -4,24 +4,24 @@
 ## Top Sigma log sources table
 | Category/Service | Channel/EventID | Count | Percentage | Rules | Source |
 |------------------|-----------------|-------|------------|-------|--------|
-| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2728 | 58.15% | 2728 | sysmon |
-| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 434 | 9.25% | 434 | sysmon |
-| security | Security | 257 | 5.48% | 257 | default |
-| file_event | Microsoft-Windows-Sysmon/Operational:11 | 212 | 4.52% | 212 | sysmon |
-| ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 187 | 3.99% | 187 | default |
+| process_creation | Microsoft-Windows-Sysmon/Operational:1<br>Security:4688 | 2736 | 58.15% | 2736 | sysmon |
+| registry_set | Microsoft-Windows-Sysmon/Operational:13 | 434 | 9.22% | 434 | sysmon |
+| security | Security | 257 | 5.46% | 257 | default |
+| file_event | Microsoft-Windows-Sysmon/Operational:11 | 215 | 4.57% | 215 | sysmon |
+| ps_script | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4104 | 187 | 3.97% | 187 | default |
 | image_load | Microsoft-Windows-Sysmon/Operational:7 | 125 | 2.66% | 125 | sysmon |
-| network_connection | Microsoft-Windows-Sysmon/Operational:3<br>Security:5156 | 104 | 2.22% | 104 | sysmon |
-| system | System | 98 | 2.09% | 98 | default |
-| registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 80 | 1.71% | 80 | sysmon |
+| network_connection | Microsoft-Windows-Sysmon/Operational:3<br>Security:5156 | 104 | 2.21% | 104 | sysmon |
+| system | System | 98 | 2.08% | 98 | default |
+| registry_event | Microsoft-Windows-Sysmon/Operational:12,13,14<br>Security:4657 | 82 | 1.74% | 82 | sysmon |
 | sysmon | Microsoft-Windows-Sysmon/Operational | 62 | 1.32% | 62 | sysmon |
 | ps_module | Microsoft-Windows-PowerShell/Operational,PowerShellCore/Operational:4103 | 36 | 0.77% | 36 | sysmon |
 | process_access | Microsoft-Windows-Sysmon/Operational:10 | 33 | 0.70% | 33 | sysmon |
 | driver_load | Microsoft-Windows-Sysmon/Operational:6 | 32 | 0.68% | 32 | sysmon |
 | application | Application | 31 | 0.66% | 31 | default |
-| dns_query | Microsoft-Windows-Sysmon/Operational:22 | 27 | 0.58% | 27 | sysmon |
+| dns_query | Microsoft-Windows-Sysmon/Operational:22 | 27 | 0.57% | 27 | sysmon |
 | windefend | Microsoft-Windows-Windows Defender/Operational | 21 | 0.45% | 21 | default |
-| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
 | pipe_created | Microsoft-Windows-Sysmon/Operational:17,18 | 20 | 0.43% | 20 | sysmon |
+| registry_add | Microsoft-Windows-Sysmon/Operational:12<br>Security:4657 | 20 | 0.43% | 20 | sysmon |
 | create_remote_thread | Microsoft-Windows-Sysmon/Operational:8 | 16 | 0.34% | 16 | sysmon |
 | file_delete | Microsoft-Windows-Sysmon/Operational:23,26 | 14 | 0.30% | 14 | sysmon |
 
@@ -31,23 +31,23 @@
 ## Top Security Event IDs table
 | EventId | Event | Count | Percentage |
 |---------|-------|-------|------------|
-| 4688 | Process created | 1323 | 78.05% |
-| 4657 | Registry value modified | 267 | 15.75% |
-| 5156 | Firewall allowed a connection | 40 | 2.36% |
+| 4688 | Process created | 1327 | 78.06% |
+| 4657 | Registry value modified | 268 | 15.76% |
+| 5156 | Firewall allowed a connection | 40 | 2.35% |
 | 4624 | Logon success | 17 | 1.00% |
 | 4625 | Logon failure | 5 | 0.29% |
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
 | 4634 | Account logoff | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
+| 5379 | Credential Manager credentials were read | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
 | 4769 | Kerberos service ticket requested | 2 | 0.12% |
 | 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 4724 | Account password reset attempt | 1 | 0.06% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 4723 | Account password change attempt | 1 | 0.06% |
-| 5145 | Network share object checked for client access | 1 | 0.06% |
+| 4778 | Window station session reconnected | 1 | 0.06% |
 | 4697 | Service installed | 1 | 0.06% |
+| 6281 | Code Integrity determined that the page hashes of an image file are not valid  | 1 | 0.06% |
+| 1102 | Audit log cleared | 1 | 0.06% |
 | 4647 | User initiated logoff | 1 | 0.06% |
-| 4741 | Computer account created | 1 | 0.06% |
