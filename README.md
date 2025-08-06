@@ -39,15 +39,15 @@
 | 4648 | Explicit logon | 4 | 0.24% |
 | 4728 | Member added to security-enabled global group | 3 | 0.18% |
 | 4634 | Account logoff | 2 | 0.12% |
-| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
-| 4732 | Member added to security-enabled local group | 2 | 0.12% |
-| 5379 | Credential Manager credentials were read | 2 | 0.12% |
-| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
 | 4720 | User account created | 2 | 0.12% |
+| 4768 | Kerberos authentication ticket (TGT) requested | 2 | 0.12% |
+| 4611 | A trusted logon process has been registered with the Local Security Authority | 2 | 0.12% |
+| 5379 | Credential Manager credentials were read | 2 | 0.12% |
+| 4732 | Member added to security-enabled local group | 2 | 0.12% |
 | 4769 | Kerberos service ticket requested | 2 | 0.12% |
-| 4672 | Admin logon | 1 | 0.06% |
-| 5038 | Code Integrity invalid file hash | 1 | 0.06% |
-| 4699 | Scheduled task deleted | 1 | 0.06% |
-| 4673 | Privileged service called | 1 | 0.06% |
-| 4698 | Scheduled task created | 1 | 0.06% |
+| 6410 | Code integrity determined that a file does not meet the security requirements to load into a process | 1 | 0.06% |
+| 5136 | Directory service object modified | 1 | 0.06% |
+| 4778 | Window station session reconnected | 1 | 0.06% |
 | 4697 | Service installed | 1 | 0.06% |
+| 4698 | Scheduled task created | 1 | 0.06% |
+| 4723 | Account password change attempt | 1 | 0.06% |
